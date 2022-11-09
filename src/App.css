@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+:root {
+  /* theme 1 */
+  --bg-color: #326789;
+  --main-color: #78a6c8;
+  --text-color: #e9eef4;
+  --red-color: #e65c4f;
+
+  /* theme 2 */
+  --bg2-color: #8fa5b2;
+  --main2-color: #c4d0c6;
+  --text2-color: #e3e9e9;
+  --ivory: #eae9e7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.bg-sinkwang {
+  /* background-image: url("./sinkwang.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)),
+    url("./sinkwang.jpg");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-size: cover;
+  background-position: center center;
+  padding: 50px 0;
 }

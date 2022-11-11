@@ -6,6 +6,7 @@ import { MenuOutlined } from "@ant-design/icons";
 
 const Navbar = styled.header`
   background-color: var(--bg2-color);
+  /* position: fixed; */
 `;
 
 const Nav = styled.div`
@@ -27,7 +28,7 @@ const Nav = styled.div`
   li {
     color: var(--main2-color);
     font-size: 20px;
-    padding: 12px 8px;
+    padding: 10px 8px;
   }
   li:hover {
     color: var(--ivory);
@@ -41,12 +42,15 @@ const Nav = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    .logo {
+      padding-bottom: 5px;
+    }
     .nav-menu {
       flex-direction: column;
       width: 100%;
+      display: ${(props) => (props.isToggleOpen ? "block" : "none")};
     }
     li {
-      /* width: 100%; */
       border-radius: 5px;
     }
     li:hover {
@@ -56,8 +60,8 @@ const Nav = styled.div`
       display: block;
       position: absolute;
       font-size: 20px;
-      right: 10px;
-      top: 10px;
+      right: 12px;
+      top: 12px;
       color: var(--main2-color);
     }
     .toggled-btn:hover {
@@ -68,19 +72,23 @@ const Nav = styled.div`
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
+
   const handleToggleOpen = () => {
     setIsToggleOpen(!isToggleOpen);
-    console.log(isToggleOpen);
+    // console.log(isToggleOpen);
   };
 
   return (
     <Navbar>
       <Inner>
-        <Nav>
+        <Nav isToggleOpen={isToggleOpen}>
           <div className="logo">
             <StyledLink to="/">신광자동차</StyledLink>
           </div>
-          <ul className="nav-menu" isToggleOpen={isToggleOpen}>
+          <ul className="nav-menu">
+            {/* <li>
+              <StyledLink to="/">Home</StyledLink>
+            </li> */}
             <li>
               <StyledLink to="./intro">회사소개</StyledLink>
             </li>
@@ -95,14 +103,6 @@ export default function Header() {
             </li>
           </ul>
           <MenuOutlined className="toggled-btn" onClick={handleToggleOpen} />
-          {/* <MenuOutlined
-            className="toggled-btn"
-            onClick={() => {
-              setIsToggleOpen(!isToggleOpen);
-              console.log(isToggleOpen);
-              console.log(props);
-            }}
-          /> */}
         </Nav>
       </Inner>
     </Navbar>

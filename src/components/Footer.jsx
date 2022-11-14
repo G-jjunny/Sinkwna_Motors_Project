@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import StyledLink from "./StyledLink";
 
 const StyledFooter = styled.div`
   color: var(--text2-color);
@@ -8,7 +9,18 @@ const StyledFooter = styled.div`
     margin: 0;
   }
   .fp {
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  .btn-group {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  button {
+    margin: 0 10px;
+    font-size: 13px;
   }
 
   background-color: var(--black);
@@ -22,13 +34,23 @@ export default function Footer() {
   return (
     <StyledFooter>
       <h2>신광자동차공업사</h2>
+      <div className="btn-group">
+        <StyledLink to="/reservation">
+          <button className="btn btn--white">예약안내</button>
+        </StyledLink>
+        <StyledLink to="/waytocome">
+          <button className="btn btn--white">찾아오시는길</button>
+        </StyledLink>
+      </div>
       <p className="fp">상호명 : 신광자동차공업사 | 대표 : 정동수</p>
+      <p className="fp">사업자 등록번호 : ㅈㅁㄷㄱㅁㅈㄷㄱ</p>
       <p className="fp">
         주소 : 충북 제천시 둔전로 49 고암동 608-5(비행장 뒤편)
       </p>
       <p className="fp">TEL : 043-644-8634 | PHONE : 010-8841-1144</p>
+
       <br />
-      <p className="fp">ⓒ 2022 신광자동차. All Right Reserved</p>
+      <p className="fp">Copyright ⓒ 2022 신광자동차. All Right Reserved</p>
     </StyledFooter>
   );
 }

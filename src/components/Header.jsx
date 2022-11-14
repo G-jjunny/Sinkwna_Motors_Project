@@ -5,67 +5,66 @@ import StyledLink from "./StyledLink";
 import { MenuOutlined } from "@ant-design/icons";
 
 const Navbar = styled.header`
-  background-color: var(--bg2-color);
-  /* position: fixed; */
-`;
-
-const Nav = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  .logo {
-    font-size: 30px;
-    font-weight: 600;
-    color: var(--main2-color);
-    cursor: pointer;
-  }
-  .nav-menu {
-    list-style: none;
+  background-color: var(--dark);
+  .nav {
     display: flex;
-    padding: 0;
-  }
-  li {
-    color: var(--main2-color);
-    font-size: 20px;
-    padding: 10px 8px;
-  }
-  li:hover {
-    color: var(--ivory);
-    transition: 0.5s;
-    text-decoration: underline;
-  }
-  .toggled-btn {
-    display: none;
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
     .logo {
-      padding-bottom: 5px;
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--main2-color);
+      cursor: pointer;
+      display: inline-block;
     }
     .nav-menu {
-      flex-direction: column;
-      width: 100%;
-      display: ${(props) => (props.isToggleOpen ? "block" : "none")};
+      list-style: none;
+      display: flex;
+      padding: 0;
     }
     li {
-      border-radius: 5px;
+      color: var(--main2-color);
+      font-size: 15px;
+      padding: 10px 15px;
     }
     li:hover {
-      background-color: var(--main2-color);
+      color: var(--ivory);
+      transition: 0.5s;
+      text-decoration: underline;
     }
     .toggled-btn {
-      display: block;
-      position: absolute;
-      font-size: 20px;
-      right: 12px;
-      top: 12px;
-      color: var(--main2-color);
+      display: none;
     }
-    .toggled-btn:hover {
-      color: var(--ivory);
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      .logo {
+        padding: 10px 0;
+      }
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: ${(props) => (props.isToggleOpen ? "block" : "none")};
+      }
+      li {
+        border-radius: 5px;
+      }
+      li:hover {
+        background-color: var(--main2-color);
+      }
+      .toggled-btn {
+        display: block;
+        position: absolute;
+        font-size: 25px;
+        right: 19px;
+        top: 19px;
+        color: var(--main2-color);
+      }
+      .toggled-btn:hover {
+        color: var(--ivory);
+      }
     }
   }
 `;
@@ -79,9 +78,9 @@ export default function Header() {
   };
 
   return (
-    <Navbar>
+    <Navbar isToggleOpen={isToggleOpen} className={isToggleOpen}>
       <Inner>
-        <Nav isToggleOpen={isToggleOpen}>
+        <div className="nav">
           <div className="logo">
             <StyledLink to="/">신광자동차</StyledLink>
           </div>
@@ -103,7 +102,7 @@ export default function Header() {
             </li>
           </ul>
           <MenuOutlined className="toggled-btn" onClick={handleToggleOpen} />
-        </Nav>
+        </div>
       </Inner>
     </Navbar>
   );

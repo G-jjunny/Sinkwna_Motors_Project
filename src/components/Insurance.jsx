@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Inner from "./Inner";
 import Slider from "./Slider";
-import ProductSlider from "./StyledSlide";
 
 const Insur = styled.div`
   text-align: center;

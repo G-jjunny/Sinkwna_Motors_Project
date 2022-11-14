@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Inner from "./Inner";
 import Repair from "../images/repair.jpg";
 import Repair2 from "../images/정비.jfif";
+import Repair3 from "../images/repair2.jpg";
 
 const Service = styled.div`
-  /* padding: 30px 0; */
   h2,
   p {
     margin: 2px 10px;
@@ -13,7 +13,7 @@ const Service = styled.div`
   }
 
   img {
-    width: 280px;
+    width: 250px;
     box-shadow: 5px 5px 8px gray;
     border-radius: 10px;
   }
@@ -47,6 +47,7 @@ const Service = styled.div`
     }
     img {
       width: 90%;
+      height: 30vw;
     }
     .text {
       /* margin: 0; */
@@ -89,7 +90,7 @@ function UserList() {
     },
     {
       id: 3,
-      img: Repair,
+      img: Repair3,
       title: "차량 검사",
       text: "신광자동차에서는 고객님의 자동차 검사 사전 안내, 안전한 자동차 운행을 위한 안전도 검사, 배출가스 검사 등 검사기준과 방법을 잘 지키며, 최신 검사장비 등을 사용하여 자동차 종합검사소로서 최고수준의 검사 업무를 시행하고 있습니다.",
     },

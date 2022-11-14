@@ -21,11 +21,16 @@ const TextGroup = styled.div`
     margin: 0;
     font-size: 18px;
   }
+  .c1 {
+    margin: 100px 0;
+  }
   .text-bg {
     position: absolute;
   }
   .welcome {
     margin-top: 10px;
+    z-index: 5;
+    /* color: aliceblue; */
   }
 
   @media screen and (max-width: 768px) {
@@ -46,8 +51,9 @@ export default function Home() {
           </div>
         </Inner>
       </div>
+      <div className="space"></div>
       <TextGroup>
-        <Inner>
+        <Inner className="c1">
           <p>Welcome to</p>
           <h1>SINKWANG MOTORS</h1>
           <p className="welcome">

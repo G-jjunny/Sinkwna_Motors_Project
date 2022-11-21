@@ -27,9 +27,19 @@ const MapContainer = () => {
     var marker = new kakao.maps.Marker({
       position: markerPosition,
     });
+    var iwContent =
+        '<div style="padding:5px;">신광자동차공업사 <br><a href="https://map.kakao.com/link/map/신광자동차공업사,37.1624125,128.2295543" style="color:blue;" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+      iwPosition = new kakao.maps.LatLng(37.1624125, 128.2295543); //인포윈도우 표시 위치입니다
+
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+      position: iwPosition,
+      content: iwContent,
+    });
 
     // 지도에 마커 표시
     marker.setMap(map);
+    infowindow.open(map, marker);
   }, []);
 
   return (

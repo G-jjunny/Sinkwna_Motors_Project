@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Button } from "antd";
 
 const Voc = styled.div`
   display: flex;
@@ -30,13 +31,19 @@ const Voc = styled.div`
     width: 100%;
     height: 300px;
   }
+  button {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .btn-group {
+    display: flex;
+  }
 `;
+
 export default function MattersForInquiry() {
   // title, content state 생성
-  const [VocContent, setVocContent] = useState({
-    title: "",
-    contents: "",
-  });
+  const [VocContent, setVocContent] = useState({});
 
   // 입력받은 title, content를 value값으로 state변경
   const getValue = (e) => {
@@ -47,7 +54,11 @@ export default function MattersForInquiry() {
     });
 
     // name, value 변경확인
-    console.log(name, value);
+    // console.log(name, value);
+    // console.log(VocContent);
+  };
+
+  const submit = () => {
     console.log(VocContent);
   };
   return (
@@ -57,11 +68,15 @@ export default function MattersForInquiry() {
           type="text"
           className="cusInfo"
           placeholder="이름을 입력해주세요"
+          name="name"
+          onChange={getValue}
         />
         <input
           type="tel"
           className="cusInfo"
           placeholder="연락처를 입력해주세요"
+          name="num"
+          onChange={getValue}
         />
       </div>
       <input
@@ -71,13 +86,22 @@ export default function MattersForInquiry() {
         name="title"
         onChange={getValue}
       />
-      <input
+      {/* <input
         type="text"
         className="voc-contents"
         placeholder="문의내용"
         name="contents"
         onChange={getValue}
-      />
+      /> */}
+      <div className="btn-group">
+        <button className="btn btn--primary" onClick={submit}>
+          입력
+        </button>
+        <button className="btn btn--primary">수정</button>
+        <Button type="primary" danger ghost>
+          삭제
+        </Button>
+      </div>
     </Voc>
   );
 }

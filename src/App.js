@@ -7,6 +7,7 @@ import Intro from "./pages/Intro";
 import Reservation from "./pages/Reservation";
 import Vehicle from "./pages/Vehicle";
 import WayToCome from "./pages/WayToCome";
+import { FloatButton } from "antd";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/waytocome" element={<WayToCome />} />
       </Routes>
       <Footer />
+      <FloatButton.BackTop />
     </BrowserRouter>
   );
 }

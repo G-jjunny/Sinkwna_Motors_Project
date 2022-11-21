@@ -18,6 +18,13 @@ const ReserveContain = styled.div`
   .title {
     margin-top: 50px;
   }
+  .title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    margin: 20px auto;
+    border-bottom: 3px solid #bcbcbc;
+  }
   .flex {
     display: flex;
     justify-content: space-evenly;
@@ -49,8 +56,8 @@ export default function Reservation() {
     <>
       <PageTop
         title="CONTACT"
-        text="오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와
-              만족으로 보답하겠습니다."
+        sub="예약안내"
+        text="신광자동차 예약안내 및 문의사항"
       />
       <ReserveContain>
         <h2 className="title">예약안내</h2>

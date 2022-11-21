@@ -16,11 +16,18 @@ const Location = styled.div`
     margin: 0;
   }
   img {
-    width: 600px;
+    width: 50%;
   }
   .title {
     text-align: center;
     margin: 50px 0;
+  }
+  .title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    margin: 20px auto;
+    border-bottom: 3px solid #bcbcbc;
   }
   .icon {
     font-size: 40px;
@@ -44,7 +51,7 @@ const Location = styled.div`
   .list {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 30px;
     border-bottom: 1px solid gray;
   }
 
@@ -70,6 +77,7 @@ export default function WayToCome() {
     <>
       <PageTop
         title="ABOUT LOCATION"
+        sub="찾아오시는길"
         text="오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와 만족으로 보답하겠습니다."
       />
       <Location>

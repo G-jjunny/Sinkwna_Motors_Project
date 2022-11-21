@@ -4,6 +4,7 @@ import Inner from "../components/Inner";
 import Contents from "../components/Contents";
 import Insurance from "../components/Insurance";
 import Permit from "../components/Permit";
+import PageTop from "../components/PageTop";
 
 const TextGroup = styled.div`
   text-align: center;
@@ -33,7 +34,13 @@ const TextGroup = styled.div`
 export default function Intro() {
   return (
     <>
-      <div className="bg-sinkwang">
+      <PageTop
+        color="white"
+        title="COMPANY INFO"
+        sub="회사소개"
+        text="신광자동차는 오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와 만족으로 보답하겠습니다."
+      ></PageTop>
+      <div>
         <TextGroup>
           <Inner>
             <p>Welcome to</p>
@@ -51,7 +58,7 @@ export default function Intro() {
       </div>
       <Contents />
       <Permit />
-      <Insurance />
+      {/* <Insurance /> */}
     </>
   );
 }

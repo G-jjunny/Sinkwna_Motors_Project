@@ -4,6 +4,7 @@ import Inner from "./Inner";
 import Repair from "../images/repair.jpg";
 import Repair2 from "../images/정비.jfif";
 import Repair3 from "../images/repair2.jpg";
+import Carry from "../images/삼성렉카.png";
 
 const Service = styled.div`
   h2,
@@ -11,13 +12,17 @@ const Service = styled.div`
     margin: 2px 10px;
     color: var(--black);
   }
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
 
-  img {
+  .service-img {
     width: 250px;
     box-shadow: 5px 5px 8px gray;
     border-radius: 10px;
   }
-  img:hover {
+  .service-img:hover {
     cursor: pointer;
     scale: 103%;
     transition: 0.5s;
@@ -34,8 +39,16 @@ const Service = styled.div`
     flex-direction: column;
     width: 70%;
   }
+  .carry {
+    background-color: #3569fe;
+    h2,
+    p {
+      color: var(--text-color);
+    }
+  }
   @media screen and (max-width: 768px) {
     display: flex;
+    flex-direction: column;
     padding: 0;
     h2 {
       margin-top: 20px;
@@ -45,8 +58,8 @@ const Service = styled.div`
       border: 0;
       padding: 20px 0;
     }
-    img {
-      width: 90%;
+    .service-img {
+      width: 70%;
       height: 30vw;
     }
     .text {
@@ -58,19 +71,26 @@ const Service = styled.div`
 `;
 const Title = styled.h1`
   text-align: center;
+  ::after {
+    content: "";
+    display: block;
+    width: 150px;
+    margin: 30px auto;
+    border-bottom: 2px solid #000;
+  }
 `;
 
 function User({ user }) {
   return (
-    <Service>
+    <>
       <Inner className="flex">
-        <img src={user.img} alt="img" />
+        <img src={user.img} className="service-img" alt="img" />
         <div className="text">
           <h2>{user.title}</h2>
           <p> - {user.text}</p>
         </div>
       </Inner>
-    </Service>
+    </>
   );
 }
 
@@ -97,12 +117,29 @@ function UserList() {
   ];
 
   return (
-    <div>
-      <Title>SERVICE</Title>
+    <Service>
+      <Title>
+        <h1>SERVICE</h1>
+        <h1>서비스</h1>
+      </Title>
       {contents.map((user) => (
         <User user={user} key={user.id} />
       ))}
-    </div>
+      <div className="carry">
+        <Inner className="flex">
+          <img src={Carry} alt="img" />
+          <div className="text">
+            <h2>삼성렉카 서비스</h2>
+            <p> 제천시내 전지역 </p>
+            <p> 중앙고속도로 </p>
+            <p> 제천↔신림 </p>
+            <p> 제천↔단양 </p>
+            <p> 제천/평택간 고속도로 </p>
+            <p> 제천↔동충주 </p>
+          </div>
+        </Inner>
+      </div>
+    </Service>
   );
 }
 

@@ -8,6 +8,7 @@
   /* theme 2 */
   --bg2-color: #8fa5b2;
   --main2-color: #c4d0c6;
+  --gray: #999999;
   --text2-color: #e3e9e9;
   --ivory: #eae9e7;
   --dark: #282828;
@@ -35,6 +36,16 @@ a:hover {
   min-width: 120px;
 }
 
+.btn--primary {
+  color: var(--dark);
+  background-color: transparent;
+}
+.btn--primary:hover {
+  background-color: var(--dark);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
 .btn--white {
   color: var(--text-color);
   background-color: transparent;
@@ -49,11 +60,15 @@ a:hover {
 
 .bg-sinkwang {
   /* background-image: url("./sinkwang.jpg"); */
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)),
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(255, 255, 255, 1) 100%
+    ),
     url("./sinkwang.jpg");
   background-size: cover;
   background-position: center center;
-  padding: 80px 0;
+  padding: 150px 0 80px 0;
 }
 
 .space {
@@ -61,18 +76,23 @@ a:hover {
 }
 
 .page-top {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)),
-    url("./sinkwang.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)),
+    url("./sinkwang.jpg"); */
+  background-image: url("./images/bg_img.jpg");
   background-size: cover;
   background-position: center center;
-  padding: 30px 0;
+  background-attachment: fixed;
+  padding: 100px 0 30px 0;
 }
 
 .swiper-wrapper {
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  /* background-color: var(--main2-color); */
-  background-color: #282828;
-  margin: 50px 0;
+  background-color: var(--black);
+  /* margin: 50px 0; */
   padding: 10px 10px 0;
+}
+
+.swiper-wrapper img {
+  margin-left: 10px;
 }

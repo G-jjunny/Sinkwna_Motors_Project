@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import CarryService from "../components/CarryService";
 import Inner from "../components/Inner";
-import Insurance from "../components/Insurance";
+// import Insurance from "../components/Insurance";
 import Permit from "../components/Permit";
 import RollingGear from "../components/RollingGear";
 import Contents from "../components/Contents";
+import Facilites from "../components/Facilites";
 
 const TextGroup = styled.div`
   text-align: center;
+  justify-content: center;
   margin: 10% auto;
   max-width: 50%;
   position: relative;
@@ -21,8 +23,12 @@ const TextGroup = styled.div`
     margin: 0;
     font-size: 18px;
   }
+  .main {
+    /* color: #fff; */
+  }
   .c1 {
     margin: 100px 0;
+    text-align: center;
   }
   .text-bg {
     position: absolute;
@@ -42,11 +48,11 @@ export default function Home() {
   return (
     <>
       <div className="bg-sinkwang">
-        <Inner>
+        <Inner className="flex">
           <div className="main-section">
             <TextGroup>
-              <h2>제천 최고 1급 자동차 공업사</h2>
-              <h1>신광자동차 공업사</h1>
+              <h2 className="main">제천 최고 1급 자동차 공업사</h2>
+              <h1 className="main"> 신광자동차 공업사</h1>
             </TextGroup>
           </div>
         </Inner>
@@ -66,10 +72,10 @@ export default function Home() {
           <RollingGear className="text-bg" />
         </Inner>
       </TextGroup>
-      <CarryService />
+      <Facilites />
       <Contents />
       <Permit />
-      <Insurance />
+      {/* <Insuranc /> */}
     </>
   );
 }

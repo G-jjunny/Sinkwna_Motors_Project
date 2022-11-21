@@ -7,6 +7,8 @@ import Repair3 from "../images/repair2.jpg";
 import Carry from "../images/삼성렉카.png";
 
 const Service = styled.div`
+  padding: 70px 0;
+  background-color: var(--main-bg);
   h2,
   p {
     margin: 2px 10px;
@@ -136,6 +138,9 @@ function UserList() {
             <p> 제천↔단양 </p>
             <p> 제천/평택간 고속도로 </p>
             <p> 제천↔동충주 </p>
+            <h2>
+              <a href="tel:043-648-1144">043-648-1144</a>
+            </h2>
           </div>
         </Inner>
       </div>

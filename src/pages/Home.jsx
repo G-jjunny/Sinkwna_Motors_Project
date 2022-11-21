@@ -72,6 +72,7 @@ export default function Home() {
           <RollingGear className="text-bg" />
         </Inner>
       </TextGroup>
+      <div className="space"></div>
       <Facilites />
       <Contents />
       <Permit />

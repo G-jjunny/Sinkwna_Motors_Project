@@ -6,7 +6,8 @@ import styled from "styled-components";
 import MattersForInquiry from "../components/MattersForInquiry";
 
 const ReserveContain = styled.div`
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding-bottom: 100px;
 
   p {
     margin: 0;
@@ -75,9 +76,9 @@ export default function Reservation() {
             </p>
           </div>
           <div className="item">
-            <div className="icon-round">
-              <MailOutlined className="icon" />
-            </div>
+            {/* <div className="icon-round"> */}
+            <MailOutlined className="icon" />
+            {/* </div> */}
             <h2>e-mail</h2>
             <p>
               <a href="mailto:ds3jyo@naver.com">ds3jyo@naver.com</a>

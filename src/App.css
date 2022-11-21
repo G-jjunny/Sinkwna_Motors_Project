@@ -6,6 +6,7 @@
   --red-color: #e65c4f;
 
   /* theme 2 */
+  --main-bg: #f5f5f5;
   --bg2-color: #8fa5b2;
   --main2-color: #c4d0c6;
   --gray: #999999;
@@ -83,6 +84,7 @@ a:hover {
   background-position: center center;
   background-attachment: fixed;
   padding: 100px 0 30px 0;
+  margin-bottom: 100px;
 }
 
 .swiper-wrapper {

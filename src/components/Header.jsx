@@ -108,6 +108,8 @@ export default function Header() {
     setIsToggleOpen(!isToggleOpen);
     console.log(isToggleOpen);
   };
+
+  // 메뉴 링크 클릭시 toggle 리셋
   const reset = () => {
     setIsToggleOpen(false);
   };
@@ -121,24 +123,24 @@ export default function Header() {
       {/* <Inner className="c1"> */}
       <div className="nav">
         <div className="logo">
-          <StyledLink to="/">신광자동차</StyledLink>
+          <StyledLink to="/" onClick={handleToggleOpen}>
+            신광자동차
+          </StyledLink>
         </div>
         <ul className={headerani} onClick={reset}>
-          {/* <li>
-              <StyledLink to="/">Home</StyledLink>
-            </li> */}
-          <li>
-            <StyledLink to="./intro">회사소개</StyledLink>
-          </li>
+          <StyledLink to="./intro">
+            <li>회사소개</li>
+          </StyledLink>
+
           <li>
             <StyledLink to="./vehicle">차량시공</StyledLink>
           </li>
-          <li>
-            <StyledLink to="/reservation">예약안내</StyledLink>
-          </li>
-          <li>
-            <StyledLink to="/waytocome">찾아오시는길</StyledLink>
-          </li>
+          <StyledLink to="/reservation">
+            <li>예약안내</li>
+          </StyledLink>
+          <StyledLink to="/waytocome">
+            <li>찾아오시는길</li>
+          </StyledLink>
         </ul>
         <MenuOutlined className="toggled-btn" onClick={handleToggleOpen} />
       </div>

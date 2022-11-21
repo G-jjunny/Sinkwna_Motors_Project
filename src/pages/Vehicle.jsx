@@ -1,5 +1,6 @@
 import React from "react";
 import Contents from "../components/Contents";
+import Facilites from "../components/Facilites";
 import PageTop from "../components/PageTop";
 import Permit from "../components/Permit";
 
@@ -13,6 +14,7 @@ export default function Vehicle() {
       />
 
       <Contents />
+      <Facilites />
       <Permit />
     </>
   );

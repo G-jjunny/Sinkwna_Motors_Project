@@ -5,9 +5,19 @@ import Inner from "./Inner";
 
 const Factory = styled.div`
   text-align: center;
-  margin-top: 300px;
+  padding: 70px 0;
   h1 {
     margin: 0;
+  }
+  p {
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+  .row {
+    display: flex;
+  }
+  .row-3 {
+    justify-content: space-between;
   }
   .title::after {
     content: "";
@@ -19,20 +29,30 @@ const Factory = styled.div`
   .contents {
     position: relative;
     width: fit-content;
-    overflow: hidden;
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    z-index: 5;
-    h2 {
-      color: #fff;
-      position: absolute;
-      z-index: 5;
-      top: 120px;
-      left: 115px;
-    }
+    height: fit-content;
     img {
-      width: 400px;
-      height: 300px;
+      /* width: 450px; */
+      height: 350px;
       width: min-content;
+    }
+    .cover {
+      top: 0;
+      position: absolute;
+      height: calc(100% - 5px);
+      width: 100%;
+      background-color: rgba(50, 50, 50, 0.4);
+      z-index: 1;
+    }
+    h1 {
+      position: absolute;
+      color: #fff;
+      top: 150px;
+      left: 130px;
+      font-weight: 300;
+    }
+    .cover:hover {
+      opacity: 0;
+      transition: opacity 0.5s;
     }
   }
 `;
@@ -45,9 +65,26 @@ export default function Facilites() {
           <h1>FACILITIES</h1>
           <h1>설비시설</h1>
         </div>
-        <div className="contents">
-          <img src={SandingRoom} alt="sandingroom" />
-          <h2>샌딩룸</h2>
+        <p>신광자동차의 주요 설비시설 입니다.</p>
+        <div className="row row-3">
+          <div className="contents">
+            <img src={SandingRoom} alt="sandingroom" />
+            <div className="cover">
+              <h1>샌딩룸</h1>
+            </div>
+          </div>
+          <div className="contents">
+            <img src={SandingRoom} alt="sandingroom" />
+            <div className="cover">
+              <h1>샌딩룸</h1>
+            </div>
+          </div>
+          <div className="contents">
+            <img src={SandingRoom} alt="sandingroom" />
+            <div className="cover">
+              <h1>샌딩룸</h1>
+            </div>
+          </div>
         </div>
       </Inner>
     </Factory>

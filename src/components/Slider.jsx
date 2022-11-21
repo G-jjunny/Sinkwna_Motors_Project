@@ -32,13 +32,13 @@ export default function Slider() {
           <img src={img1} alt="img1" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img2} alt="img2" style={{ width: "200px" }} />
+          <img src={img2} alt="img2" style={{ width: "180px" }} />
         </SwiperSlide>
         <SwiperSlide>
           <img src={img3} alt="img3" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} alt="img4" style={{ width: "200px" }} />
+          <img src={img4} alt="img4" style={{ width: "180px" }} />
         </SwiperSlide>
         <SwiperSlide>
           <img src={img5} alt="img5" />

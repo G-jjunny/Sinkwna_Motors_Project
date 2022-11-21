@@ -7,7 +7,8 @@ import { MailOutlined, PhoneOutlined, HomeOutlined } from "@ant-design/icons";
 import Sinkwang from "../sinkwang.jpg";
 
 const Location = styled.div`
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding-bottom: 100px;
   p {
     font-size: 15px;
     margin: 0;
@@ -81,7 +82,7 @@ export default function WayToCome() {
         text="오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와 만족으로 보답하겠습니다."
       />
       <Location>
-        <h2 className="title">찾아오시는길</h2>
+        <h2 className="title">오시는길</h2>
         <Inner className="flex">
           <img src={Sinkwang} alt="img" />
           <div>

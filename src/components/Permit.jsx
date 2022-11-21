@@ -4,7 +4,7 @@ import Inner from "./Inner";
 import SandingRoom from "../images/SandingRoom.jpg";
 
 const PermitBox = styled.div`
-  margin: 100px 0;
+  padding: 70px 0;
   img {
     width: 300px;
   }

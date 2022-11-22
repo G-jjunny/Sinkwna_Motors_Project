@@ -26,7 +26,7 @@ const Navbar = styled.header`
       font-size: 25px;
       font-weight: 500;
       cursor: pointer;
-      margin: 15px 20px;
+      margin: 10px 20px;
     }
     .nav-menu {
       /* margin-top: 50px; */
@@ -38,7 +38,7 @@ const Navbar = styled.header`
       z-index: 5;
     }
     li {
-      font-size: 15px;
+      font-size: 13px;
       padding: 10px 15px;
     }
     li:hover {
@@ -131,7 +131,6 @@ export default function Header() {
           <StyledLink to="./intro">
             <li>회사소개</li>
           </StyledLink>
-
           <li>
             <StyledLink to="./vehicle">차량시공</StyledLink>
           </li>

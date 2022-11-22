@@ -13,8 +13,8 @@ export default function Vehicle() {
         text="오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와 만족으로 보답하겠습니다."
       />
 
-      <Contents />
       <Facilites />
+      <Contents />
       <Permit />
     </>
   );

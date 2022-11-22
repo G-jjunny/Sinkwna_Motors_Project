@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Inner = styled.div`
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 
   @media screen and (max-width: 1300px) {

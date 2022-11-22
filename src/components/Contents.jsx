@@ -18,6 +18,12 @@ const Service = styled.div`
     text-align: center;
     margin: 0;
   }
+  .sub {
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 22px;
+  }
 
   .service-img {
     width: 250px;
@@ -43,9 +49,27 @@ const Service = styled.div`
   }
   .carry {
     background-color: #3569fe;
+    text-align: center;
     h2,
     p {
       color: var(--text-color);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      /* li::after {
+        content: "";
+        display: block;
+        width: 50px;
+        margin: 5px auto;
+        border-bottom: 2px solid #fff;
+      } */
     }
   }
   @media screen and (max-width: 768px) {
@@ -122,7 +146,7 @@ function UserList() {
     <Service>
       <Title>
         <h1>SERVICE</h1>
-        <h1>서비스</h1>
+        <h1 className="sub">서비스</h1>
       </Title>
       {contents.map((user) => (
         <User user={user} key={user.id} />
@@ -132,12 +156,14 @@ function UserList() {
           <img src={Carry} alt="img" />
           <div className="text">
             <h2>삼성렉카 서비스</h2>
-            <p> 제천시내 전지역 </p>
-            <p> 중앙고속도로 </p>
-            <p> 제천↔신림 </p>
-            <p> 제천↔단양 </p>
-            <p> 제천/평택간 고속도로 </p>
-            <p> 제천↔동충주 </p>
+            <ul>
+              <li> 제천시내 전지역 </li>
+              <li> 중앙고속도로 </li>
+              <li> 제천↔신림 </li>
+              <li> 제천↔단양 </li>
+              <li> 제천/평택간 고속도로 </li>
+              <li> 제천↔동충주 </li>
+            </ul>
             <h2>
               <a href="tel:043-648-1144">043-648-1144</a>
             </h2>

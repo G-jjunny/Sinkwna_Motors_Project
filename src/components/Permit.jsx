@@ -11,6 +11,9 @@ const PermitBox = styled.div`
   h1 {
     text-align: center;
   }
+  .sub {
+    font-weight: 300;
+  }
   .title::after {
     content: "";
     display: block;
@@ -58,19 +61,19 @@ export default function Permit() {
     {
       id: 1,
       img: SandingRoom,
-      title: "샌딩룸",
+      title: "허가증1",
       text: "하는 일 이것 저것asdfasdfasdfasdfasfasd",
     },
     {
       id: 2,
       img: "https://placeimg.com/200/200/car",
-      title: "장비 이름",
+      title: "허가증2",
       text: "하는 일 이것 저것",
     },
     {
       id: 3,
       img: "https://placeimg.com/200/200/car",
-      title: "장비 이름",
+      title: "허가증3",
       text: "하는 일 이것 저것",
     },
     {
@@ -97,7 +100,7 @@ export default function Permit() {
       <PermitBox>
         <div className="title">
           <h1>PETMIT & EQUIPMENT</h1>
-          <h1>인·허가&주요장비</h1>
+          <h1 className="sub">인·허가&주요장비</h1>
         </div>
         <Inner className="flex">
           {MachineList.map((list) => (

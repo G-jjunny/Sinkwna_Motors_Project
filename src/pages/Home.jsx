@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CarryService from "../components/CarryService";
+// import CarryService from "../components/CarryService";
 import Inner from "../components/Inner";
 // import Insurance from "../components/Insurance";
 import Permit from "../components/Permit";

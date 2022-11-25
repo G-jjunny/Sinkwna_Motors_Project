@@ -6,7 +6,9 @@ import SandingRoom from "../images/SandingRoom.jpg";
 const PermitBox = styled.div`
   padding: 70px 0;
   img {
-    width: 300px;
+    width: 25vw;
+    max-width: 300px;
+    min-width: 220px;
   }
   h1 {
     text-align: center;
@@ -23,6 +25,7 @@ const PermitBox = styled.div`
   }
   .contents {
     margin: 0 20px;
+    width: 30%;
     max-width: min-content;
     /* display: flex;
     flex-direction: column; */
@@ -32,14 +35,17 @@ const PermitBox = styled.div`
   }
   .flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* justify-content: space-between; */
     flex-flow: wrap;
-  }
-  .contents {
   }
   @media screen and (max-width: 768px) {
     .flex {
       justify-content: space-evenly;
+    }
+    img {
+      width: 150px;
+      min-width: 150px;
     }
   }
 `;
@@ -62,7 +68,7 @@ export default function Permit() {
       id: 1,
       img: SandingRoom,
       title: "허가증1",
-      text: "하는 일 이것 저것asdfasdfasdfasdfasfasd",
+      text: "하는 일 이것 저것",
     },
     {
       id: 2,

@@ -22,9 +22,9 @@ const ReserveContain = styled.div`
   .title::after {
     content: "";
     display: block;
-    width: 60px;
-    margin: 20px auto;
-    border-bottom: 3px solid #bcbcbc;
+    width: 150px;
+    margin: 30px auto;
+    border-bottom: 2px solid #000;
   }
   .flex {
     display: flex;
@@ -38,11 +38,16 @@ const ReserveContain = styled.div`
     text-align: center;
     display: flex;
     flex-direction: column;
+    transition: 2s;
     .icon {
       margin: auto;
       font-size: 90px;
       color: var(--black);
     }
+  }
+  .icon-round:hover {
+    transform: rotateY(-180deg);
+    transition: 2s;
   }
 
   .item {
@@ -84,10 +89,6 @@ export default function Reservation() {
               <a href="mailto:ds3jyo@naver.com">ds3jyo@naver.com</a>
             </p>
           </div>
-        </Inner>
-        <h2 className="title">문의하기</h2>
-        <Inner>
-          <MattersForInquiry />
         </Inner>
       </ReserveContain>
     </>

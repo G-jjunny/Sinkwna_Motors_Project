@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import FooterSlider from "./FooterSlider";
 import Inner from "./Inner";
 import Slider from "./Slider";
 import StyledLink from "./StyledLink";
@@ -35,29 +36,32 @@ const StyledFooter = styled.div`
 
 export default function Footer() {
   return (
-    <StyledFooter>
-      <Inner>
-        <h2>신광자동차공업사</h2>
-        <div className="btn-group">
-          <StyledLink to="/reservation">
-            <button className="btn btn--white">예약안내</button>
-          </StyledLink>
-          <StyledLink to="/waytocome">
-            <button className="btn btn--white">찾아오시는길</button>
-          </StyledLink>
-        </div>
-        <p className="fp">
-          상호명 : 신광자동차공업사 | 대표 : 정동수 | 사업자 등록번호 :
-          ㅈㅁㄷㄱㅁㅈㄷㄱ
-        </p>
-        <p className="fp">
-          주소 : 충북 제천시 둔전로 49 고암동 608-5(비행장 뒤편)
-        </p>
-        <p className="fp">TEL : 043-644-8634 | PHONE : 010-8841-1144</p>
+    <>
+      <FooterSlider />
+      <StyledFooter>
+        <Inner>
+          <h2>신광자동차공업사</h2>
+          <div className="btn-group">
+            <StyledLink to="/reservation">
+              <button className="btn btn--white">예약안내</button>
+            </StyledLink>
+            <StyledLink to="/waytocome">
+              <button className="btn btn--white">찾아오시는길</button>
+            </StyledLink>
+          </div>
+          <p className="fp">
+            상호명 : 신광자동차공업사 | 대표 : 정동수 | 사업자 등록번호 :
+            ㅈㅁㄷㄱㅁㅈㄷㄱ
+          </p>
+          <p className="fp">
+            주소 : 충북 제천시 둔전로 49 고암동 608-5(비행장 뒤편)
+          </p>
+          <p className="fp">TEL : 043-644-8634 | PHONE : 010-8841-1144</p>
 
-        <Slider />
-      </Inner>
-      <p className="fp">Copyright ⓒ 2022 신광자동차. All Right Reserved</p>
-    </StyledFooter>
+          <Slider />
+        </Inner>
+        <p className="fp">Copyright ⓒ 2022 신광자동차. All Right Reserved</p>
+      </StyledFooter>
+    </>
   );
 }

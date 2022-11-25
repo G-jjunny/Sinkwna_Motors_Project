@@ -4,18 +4,19 @@ import Slider from "./Slider";
 
 const Insur = styled.div`
   text-align: center;
-  padding-top: 20px;
-  color: var(--text2-color);
-  background-color: var(--black);
+  padding: 20px 0;
+
+  /* color: var(--text2-color); */
+  /* background-color: var(--black); */
 `;
 
 export default function Insurance() {
   return (
     <Insur>
       <Inner>
-        <h1>보험수리</h1>
+        <h2>보험수리</h2>
         <p>
-          저희 신광자동차공업사 에서는 전차종 뿐만 아니라 전보험 수리상담을
+          신광자동차공업사 에서는 전차종 뿐만 아니라 전보험 수리상담을
           진행해드리고 있습니다.
         </p>
         <Slider />

@@ -68,6 +68,10 @@ const Factory = styled.div`
     }
     .contents {
       width: 90%;
+      /* max-height: 400px; */
+      img {
+        max-height: 380px;
+      }
     }
   }
 `;

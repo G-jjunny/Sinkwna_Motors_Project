@@ -5,9 +5,10 @@ import Repair from "../images/repair.jpg";
 import Repair2 from "../images/정비.jfif";
 import Repair3 from "../images/repair2.jpg";
 import Carry from "../images/삼성렉카.png";
+import Insurance from "./Insurance";
 
 const Service = styled.div`
-  padding: 70px 0;
+  padding: 70px 0 0;
   background-color: var(--main-bg);
   h2,
   p {
@@ -62,14 +63,6 @@ const Service = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      /* li::after {
-        content: "";
-        display: block;
-        width: 50px;
-        margin: 5px auto;
-        border-bottom: 2px solid #fff;
-      } */
     }
   }
   @media screen and (max-width: 768px) {
@@ -170,6 +163,7 @@ function UserList() {
           </div>
         </Inner>
       </div>
+      <Insurance />
     </Service>
   );
 }

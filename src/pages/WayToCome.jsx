@@ -9,6 +9,7 @@ import Sinkwang from "../sinkwang.jpg";
 const Location = styled.div`
   /* padding: 100px 0; */
   padding-bottom: 100px;
+
   p {
     font-size: 15px;
     margin: 0;
@@ -26,9 +27,15 @@ const Location = styled.div`
   .title::after {
     content: "";
     display: block;
-    width: 60px;
-    margin: 20px auto;
-    border-bottom: 3px solid #bcbcbc;
+    width: 150px;
+    margin: 30px auto;
+    border-bottom: 2px solid #000;
+  }
+  h1 {
+    text-align: center;
+  }
+  .sub {
+    font-weight: 300;
   }
   .icon {
     font-size: 40px;
@@ -41,8 +48,6 @@ const Location = styled.div`
     margin-top: 50px;
     width: 100%;
     height: 400px;
-    /* width: 560px;
-    height: 380px; */
   }
   .flex {
     display: flex;
@@ -63,10 +68,6 @@ const Location = styled.div`
     img {
       display: none;
     }
-    .map {
-      width: 90%;
-      margin: 20px auto;
-    }
     .title {
       margin: 10px 0;
     }
@@ -79,10 +80,13 @@ export default function WayToCome() {
       <PageTop
         title="ABOUT LOCATION"
         sub="찾아오시는길"
-        text="오랜 경력과 노하우를 바탕으로 고객 여러분께 최고의 서비스와 만족으로 보답하겠습니다."
+        text="신광자동차를 방문하시는 길."
       />
       <Location>
-        {/* <h2 className="title">오시는길</h2> */}
+        <div className="title">
+          <h1>신광자동차</h1>
+          <h1 className="sub">오시는길</h1>
+        </div>
         <Inner className="flex">
           <img src={Sinkwang} alt="img" />
           <div>

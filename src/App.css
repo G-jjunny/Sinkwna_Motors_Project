@@ -88,13 +88,17 @@ a:hover {
 }
 
 .swiper-wrapper {
-  /* justify-content: center; */
   align-items: center;
-  background-color: var(--black);
+  /* background-color: var(--black); */
   /* margin: 50px 0; */
   padding: 10px 10px 0;
 }
 
+.swiper-slide {
+  margin: 0;
+}
+
 .swiper-wrapper img {
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  width: 200px;
 }

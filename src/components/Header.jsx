@@ -59,6 +59,7 @@ const Navbar = styled.header`
         padding: 0;
       }
       .nav-menu {
+        padding-bottom: 10px;
         flex-direction: column;
         width: 100%;
         transition: 0.5s;

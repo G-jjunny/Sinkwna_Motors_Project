@@ -36,22 +36,19 @@ const MapContainer = () => {
       position: iwPosition,
       content: iwContent,
     });
+    // function setZoomable(zoomable) {
+    //   // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+    //   map.setZoomable(zoomable);
+    // }
+    map.setZoomable(false);
+    map.relayout();
 
     // 지도에 마커 표시
     marker.setMap(map);
     infowindow.open(map, marker);
   }, []);
 
-  return (
-    <div
-      id="myMap"
-      //   style={{
-      //     width: "500px",
-      //     height: "400px",
-      //   }}
-      className="map"
-    ></div>
-  );
+  return <div id="myMap" className="map"></div>;
 };
 
 export default MapContainer;

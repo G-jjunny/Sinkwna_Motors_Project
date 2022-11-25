@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Inner from "../components/Inner";
-import Contents from "../components/Contents";
-import Insurance from "../components/Insurance";
-import Permit from "../components/Permit";
 import PageTop from "../components/PageTop";
 
 const TextGroup = styled.div`
@@ -56,9 +53,7 @@ export default function Intro() {
           </Inner>
         </TextGroup>
       </div>
-      <Contents />
-      <Permit />
-      {/* <Insurance /> */}
+      <Inner></Inner>
     </>
   );
 }

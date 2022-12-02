@@ -3,11 +3,12 @@ import Inner from "../components/Inner";
 import PageTop from "../components/PageTop";
 import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import styled from "styled-components";
-import MattersForInquiry from "../components/MattersForInquiry";
+import { MailForm } from "../components/MailForm";
+import { AntdForm } from "../components/AntdForm";
 
 const ReserveContain = styled.div`
   /* padding: 100px 0; */
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 
   p {
     margin: 0;
@@ -16,8 +17,14 @@ const ReserveContain = styled.div`
   h2 {
     text-align: center;
   }
+  .sub {
+    font-weight: 300;
+  }
   .title {
     margin-top: 50px;
+  }
+  .reverse {
+    color: #fff;
   }
   .title::after {
     content: "";
@@ -25,6 +32,13 @@ const ReserveContain = styled.div`
     width: 150px;
     margin: 30px auto;
     border-bottom: 2px solid #000;
+  }
+  .reverse::after {
+    content: "";
+    display: block;
+    width: 150px;
+    margin: 30px auto;
+    border-bottom: 2px solid #fff;
   }
   .flex {
     display: flex;
@@ -62,11 +76,13 @@ export default function Reservation() {
     <>
       <PageTop
         title="CONTACT"
-        sub="예약안내"
+        sub="예약 & 문의"
         text="신광자동차 예약안내 및 문의사항"
       />
       <ReserveContain>
-        <h2 className="title">예약안내</h2>
+        <div className="title">
+          <h1 className="sub">예약안내</h1>
+        </div>
         <Inner className="flex">
           <div className="item">
             <div className="icon-round">
@@ -90,6 +106,12 @@ export default function Reservation() {
             </p>
           </div>
         </Inner>
+        <div className="contact-bg">
+          <Inner>
+            <MailForm />
+            {/* <AntdForm /> */}
+          </Inner>
+        </div>
       </ReserveContain>
     </>
   );

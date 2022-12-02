@@ -124,7 +124,7 @@ export default function Header() {
       {/* <Inner className="c1"> */}
       <div className="nav">
         <div className="logo">
-          <StyledLink to="/" onClick={handleToggleOpen}>
+          <StyledLink to="/" onClick={reset}>
             신광자동차
           </StyledLink>
         </div>

@@ -37,7 +37,7 @@ const StyledFooter = styled.div`
 export default function Footer() {
   return (
     <>
-      <FooterSlider />
+      {/* <FooterSlider /> */}
       <StyledFooter>
         <Inner>
           <h2>신광자동차공업사</h2>

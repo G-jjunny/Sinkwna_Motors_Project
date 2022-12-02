@@ -5,6 +5,7 @@ import PageTop from "../components/PageTop";
 
 const TextGroup = styled.div`
   text-align: center;
+  /* text-align: left; */
   margin: 10% auto;
   max-width: 50%;
   position: relative;
@@ -22,6 +23,20 @@ const TextGroup = styled.div`
   }
   .welcome {
     margin-top: 10px;
+  }
+  .title::after {
+    content: "";
+    display: block;
+    width: 150px;
+    margin: 30px auto;
+    border-bottom: 2px solid #fff;
+  }
+  .sub {
+    font-weight: 300;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
   }
 
   @media screen and (max-width: 768px) {
@@ -53,7 +68,22 @@ export default function Intro() {
           </Inner>
         </TextGroup>
       </div>
-      <Inner></Inner>
+      <div className="ceo_bg">
+        <TextGroup>
+          <div className="title">
+            <h1>
+              SINCE <span className="sub">2000</span>
+            </h1>
+            <h1 className="sub">회사연혁</h1>
+          </div>
+          <ul>
+            <li>2000</li>
+            <li>2000</li>
+            <li>2000</li>
+            <li>2000</li>
+          </ul>
+        </TextGroup>
+      </div>
     </>
   );
 }

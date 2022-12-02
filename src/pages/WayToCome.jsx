@@ -65,9 +65,12 @@ const Location = styled.div`
     .flex {
       flex-direction: column;
     }
-    img {
+
+    /* 지도가 이미지태그로 인식됨 img태그는 사용ㄴㄴ 클래스나 id값 사용할 것 */
+
+    /* img {
       display: none;
-    }
+    } */
     .title {
       margin: 10px 0;
     }

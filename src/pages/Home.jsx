@@ -24,7 +24,7 @@ const TextGroup = styled.div`
     font-size: 18px;
   }
   .main {
-    /* color: #fff; */
+    color: #fff;
   }
   .c1 {
     margin: 100px 0;
@@ -41,6 +41,12 @@ const TextGroup = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 90%;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 15px;
+    }
   }
 `;
 

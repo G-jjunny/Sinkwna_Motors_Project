@@ -76,11 +76,15 @@ export default function Intro() {
             </h1>
             <h1 className="sub">회사연혁</h1>
           </div>
+          <h2>
+            n년동안 쌓아온 경력과 노하우를 바탕으로 고객 여러분께 최고의
+            서비스와 만족으로 보답하겠습니다.
+          </h2>
           <ul>
+            {/* <li>2000</li>
             <li>2000</li>
             <li>2000</li>
-            <li>2000</li>
-            <li>2000</li>
+            <li>2000</li> */}
           </ul>
         </TextGroup>
       </div>

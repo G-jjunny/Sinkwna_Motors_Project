@@ -23,11 +23,12 @@ const Service = styled.div`
     font-weight: 300;
   }
   h2 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .service-img {
     width: 250px;
+    height: 160px;
     box-shadow: 5px 5px 8px gray;
     border-radius: 10px;
   }
@@ -40,7 +41,7 @@ const Service = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px solid var(--main2-color);
+    /* border-bottom: 1px solid var(--main2-color); */
     padding: 30px 0;
   }
   .text {
@@ -49,22 +50,39 @@ const Service = styled.div`
     width: 70%;
   }
   .carry {
-    background-color: #3569fe;
+    /* background-color: #3569fe; */
     text-align: center;
     h2,
     p {
-      color: var(--text-color);
+      /* color: var(--text-color); */
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .service-img {
+      height: 240px;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
-      color: var(--text-color);
+      /* color: var(--text-color); */
       display: flex;
       flex-direction: column;
       align-items: center;
+      li {
+        font-size: 20px;
+      }
     }
   }
+  .con::after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    border-bottom: 1px solid #000;
+  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -102,12 +120,15 @@ const Title = styled.h1`
 function User({ user }) {
   return (
     <>
-      <Inner className="flex">
-        <img src={user.img} className="service-img" alt="img" />
-        <div className="text">
-          <h2>{user.title}</h2>
-          <p> - {user.text}</p>
+      <Inner className="con">
+        <div className="flex">
+          <img src={user.img} className="service-img" alt="img" />
+          <div className="text">
+            <h2>{user.title}</h2>
+            <p> - {user.text}</p>
+          </div>
         </div>
+        {/* <div>{user.slide}</div> */}
       </Inner>
     </>
   );
@@ -123,15 +144,16 @@ function UserList() {
     },
     {
       id: 2,
-      img: Repair2,
-      title: "보험/사고 수리",
-      text: "신과자동차는 1급 종합정비업체로서, 자동차 사고의 정확한 수리견적(보험견적), 차체수리 및 수용성 보수도장 등 전문 장비와 인력이 항상 준비되어 있습니다.",
-    },
-    {
-      id: 3,
       img: Repair3,
       title: "차량 검사",
       text: "신광자동차에서는 고객님의 자동차 검사 사전 안내, 안전한 자동차 운행을 위한 안전도 검사, 배출가스 검사 등 검사기준과 방법을 잘 지키며, 최신 검사장비 등을 사용하여 자동차 종합검사소로서 최고수준의 검사 업무를 시행하고 있습니다.",
+    },
+    {
+      id: 3,
+      img: Repair2,
+      title: "보험/사고 수리",
+      text: "신과자동차는 1급 종합정비업체로서, 자동차 사고의 정확한 수리견적(보험견적), 차체수리 및 수용성 보수도장 등 전문 장비와 인력이 항상 준비되어 있습니다.",
+      slide: <Insurance />,
     },
   ];
 
@@ -146,7 +168,7 @@ function UserList() {
       ))}
       <div className="carry">
         <Inner className="flex">
-          <img src={Carry} alt="img" />
+          <img src={Carry} alt="img" className="service-img" />
           <div className="text">
             <h2>삼성렉카 서비스</h2>
             <ul>
@@ -158,12 +180,12 @@ function UserList() {
               <li> 제천↔동충주 </li>
             </ul>
             <h2>
-              <a href="tel:043-648-1144">043-648-1144</a>
+              TEL: <a href="tel:043-648-1144">043-648-1144</a>
             </h2>
           </div>
         </Inner>
       </div>
-      <Insurance />
+      {/* <Insurance /> */}
     </Service>
   );
 }

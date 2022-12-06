@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Checkbox, ConfigProvider, Form, Input } from "antd";
 import styled from "styled-components";
+import { send } from "emailjs-com";
 
 const Mail = styled.div`
   display: flex;
   flex-direction: column;
   /* background-color: rgba(245, 245, 245, 1); */
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: rgba(255, 255, 255, 0.96);
   padding: 0 50px 100px 50px;
   border-radius: 10px;
 
@@ -78,16 +79,18 @@ export const MailForm = () => {
       <div className="title">
         <h1 className="sub">문의하기</h1>
       </div>
-      {/* <Form ref={form} onSubmit={sendEmail} className="col"> */}
+      {/* <Form > */}
+      {/* <ConfigProvider form={{ validateMessages }}> */}
       <form ref={form} onSubmit={sendEmail}>
         <div className="row">
           <Form.Item
+            // name={["user", "name"]}
             name={["user", "name"]}
             label="이름"
             rules={[
               {
                 required: true,
-                message: "Please input your username!",
+                message: "Please input your name!",
               },
             ]}
           >
@@ -112,6 +115,7 @@ export const MailForm = () => {
           </Form.Item>
         </div>
         <Form.Item
+          name={["user", "email"]}
           label="Email"
           rules={[
             {
@@ -120,14 +124,14 @@ export const MailForm = () => {
           ]}
         >
           <Input
-            type="email"
             name="email"
+            type="email"
             placeholder="이메일 주소를 입력해주세요"
             size="large"
           />
         </Form.Item>
-        <Form.Item label="내용">
-          <Input.TextArea name="text" rows={7} />
+        <Form.Item name={["user", "text"]} label="내용">
+          <Input.TextArea name="text" rows={7} placeholder="문의하실 내용" />
         </Form.Item>
         {/* <Button type="primary" htmlType="submit" value="send">
           전송
@@ -136,6 +140,7 @@ export const MailForm = () => {
           전송
         </button>
       </form>
+      {/* </ConfigProvider> */}
       {/* </Form> */}
     </Mail>
   );

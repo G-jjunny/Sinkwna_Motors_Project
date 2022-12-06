@@ -5,6 +5,9 @@ import Slider from "./Slider";
 const Insur = styled.div`
   text-align: center;
   padding: 20px 0;
+  p {
+    margin: 20px 0;
+  }
 
   /* color: var(--text2-color); */
   /* background-color: var(--black); */

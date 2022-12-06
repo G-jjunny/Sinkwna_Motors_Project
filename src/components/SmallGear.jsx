@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Gear from "../images/gear_8.svg";
 
-const RollingCircle = styled.div`
+const Gearsmall = styled.div`
   .circle {
-    width: 30vw;
-    height: 30vw;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
     /* background-color: var(--main2-color); */
@@ -13,25 +13,22 @@ const RollingCircle = styled.div`
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     position: absolute;
-    top: calc(50% - 15vw);
-    left: calc(50% - 15vw);
-    z-index: -1;
-    /*   transform: rotate(3deg); */
-    /* transform: rotate(0.3rad);/ */
-    /* transform: rotate(3grad); */
-    /* transform: rotate(.03turn);  */
   }
   .gear {
-    z-index: -1;
-    color: aliceblue;
+    width: 150px;
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
   }
 
   @media screen and (max-width: 768px) {
     .circle {
-      width: 50vw;
+      /* width: 50vw;
       height: 50vw;
       top: calc(50% - 25vw);
-      left: calc(50% - 25vw);
+      left: calc(50% - 25vw); */
     }
   }
 
@@ -45,12 +42,12 @@ const RollingCircle = styled.div`
   }
 `;
 
-export default function RollingGear() {
+export default function SmallGear() {
   return (
-    <RollingCircle>
-      <div className="circle">
-        <img src={Gear} className="gear" alt="gear" />
-      </div>
-    </RollingCircle>
+    <Gearsmall>
+      {/* <div className="circle"> */}
+      <img src={Gear} className="gear" alt="gear" />
+      {/* </div> */}
+    </Gearsmall>
   );
 }

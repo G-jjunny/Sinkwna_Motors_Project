@@ -43,7 +43,12 @@ export default function Slider() {
           <img src={img4} alt="img4" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img5} alt="img5" style={{ width: "100px" }} />
+          <img
+            className="axa"
+            src={img5}
+            alt="img5"
+            // style={{ width: "100px"}}
+          />
         </SwiperSlide>
       </Swiper>
     </Inner>

@@ -121,6 +121,21 @@ a:hover {
   /* margin-left: 10px; */
   width: 200px;
 }
+.swiper-wrapper .axa {
+  width: 100px;
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide.swiper-slide-duplicate {
+    margin-right: 30px;
+  }
+  .swiper-wrapper img {
+    /* margin-left: 10px; */
+    width: 100px;
+  }
+  .swiper-wrapper .axa {
+    width: 50px;
+  }
+}
 
 .ceo_bg {
   background-image: url("./images/ceo_bg.jpg");

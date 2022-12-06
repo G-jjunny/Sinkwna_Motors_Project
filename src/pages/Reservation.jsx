@@ -5,6 +5,8 @@ import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { MailForm } from "../components/MailForm";
 import { AntdForm } from "../components/AntdForm";
+import RollingGear from "../components/RollingGear";
+import SmallGear from "../components/SmallGear";
 
 const ReserveContain = styled.div`
   /* padding: 100px 0; */
@@ -45,21 +47,23 @@ const ReserveContain = styled.div`
     justify-content: space-evenly;
   }
   .icon-round {
-    background-color: var(--main2-color);
+    position: relative;
+    /* background-color: var(--main2-color); */
     width: 150px;
     height: 150px;
     border-radius: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    transition: 2s;
     .icon {
       margin: auto;
       font-size: 90px;
       color: var(--black);
+      z-index: 5;
+      transition: 2s;
     }
   }
-  .icon-round:hover {
+  .icon:hover {
     transform: rotateY(-180deg);
     transition: 2s;
   }
@@ -68,6 +72,11 @@ const ReserveContain = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .gear {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 `;
 
@@ -87,6 +96,7 @@ export default function Reservation() {
           <div className="item">
             <div className="icon-round">
               <PhoneOutlined className="icon" />
+              <SmallGear className="gear left" />
             </div>
             <h2>전화예약</h2>
             <p>
@@ -99,6 +109,7 @@ export default function Reservation() {
           <div className="item">
             <div className="icon-round">
               <MailOutlined className="icon" />
+              <SmallGear className="gear left" />
             </div>
             <h2>e-mail</h2>
             <p>

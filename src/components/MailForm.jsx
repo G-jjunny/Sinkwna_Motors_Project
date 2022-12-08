@@ -50,9 +50,12 @@ const Mail = styled.div`
     padding: 0 20px 100px 20px;
     .row {
       input {
-        min-width: 100%;
+        min-width: 280px;
         width: 100%;
       }
+    }
+    input {
+      min-width: 280px;
     }
   }
 `;

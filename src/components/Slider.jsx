@@ -21,11 +21,11 @@ export default function Slider() {
         spaceBetween={50}
         slidesPerView={5}
         loop={true}
-        breakpoints={{
-          768: {
-            slidesPerView: 3,
-          },
-        }}
+        // breakpoints={{
+        //   768: {
+        //     slidesPerView: 3,
+        //   },
+        // }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >

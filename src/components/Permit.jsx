@@ -48,6 +48,16 @@ const PermitBox = styled.div`
       min-width: 150px;
     }
   }
+  @media screen and (max-width: 500px) {
+    .contents {
+      margin: 0;
+      min-width: 120px;
+    }
+    img {
+      width: 120px;
+      min-width: 120px;
+    }
+  }
 `;
 
 function Machine({ list }) {

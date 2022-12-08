@@ -17,6 +17,7 @@ const Main = styled.div`
   }
   h1 {
     font-size: 40px;
+    font-weight: 700;
   }
 `;
 

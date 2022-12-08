@@ -61,6 +61,11 @@ const Factory = styled.div`
       transition: opacity 0.5s;
     }
   }
+  .drop {
+    height: 200px;
+    background-color: aliceblue;
+    display: none;
+  }
   @media screen and (max-width: 768px) {
     .row {
       flex-direction: column;
@@ -111,6 +116,7 @@ export default function Facilites() {
             </div>
           </div>
         </div>
+        <div className="drop">test</div>
       </Inner>
     </Factory>
   );

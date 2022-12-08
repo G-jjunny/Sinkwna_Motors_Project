@@ -32,7 +32,23 @@ const StyledFooter = styled.div`
   text-align: center;
   margin: 0;
   padding: 50px 0;
+
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 500px) {
+  }
 `;
+const handleScroll = (e) => {
+  if (!window.scrollY) return;
+  // 현재 위치가 이미 최상단일 경우 return
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+// export default handleScroll;
 
 export default function Footer() {
   return (
@@ -43,10 +59,14 @@ export default function Footer() {
           <h2>신광자동차공업사</h2>
           <div className="btn-group">
             <StyledLink to="/reservation">
-              <button className="btn btn--white">예약안내</button>
+              <button className="btn btn--white" onClick={handleScroll}>
+                예약안내
+              </button>
             </StyledLink>
             <StyledLink to="/waytocome">
-              <button className="btn btn--white">찾아오시는길</button>
+              <button className="btn btn--white" onClick={handleScroll}>
+                찾아오시는길
+              </button>
             </StyledLink>
           </div>
           <p className="fp">

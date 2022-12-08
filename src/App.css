@@ -130,6 +130,12 @@ a:hover {
   width: 100px;
 }
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
   .swiper-slide.swiper-slide-duplicate {
     margin-right: 30px;
   }

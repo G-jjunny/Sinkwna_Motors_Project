@@ -115,7 +115,20 @@ export default function Header() {
   const reset = () => {
     setIsToggleOpen(false);
   };
+
+  //반응형 헤더 state
   const headerani = isToggleOpen ? "nav-menu" : "nav-menu active";
+
+  // 헤더클릭시 화면 상단으로 이동
+  const handleScroll = (e) => {
+    if (!window.scrollY) return;
+    // 현재 위치가 이미 최상단일 경우 return
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <Navbar
       isToggleOpen={isToggleOpen}
@@ -125,11 +138,11 @@ export default function Header() {
       {/* <Inner className="c1"> */}
       <div className="nav">
         <div className="logo">
-          <StyledLink to="/" onClick={reset}>
+          <StyledLink to="/" onClick={(reset, handleScroll)}>
             신광자동차
           </StyledLink>
         </div>
-        <ul className={headerani} onClick={reset}>
+        <ul className={headerani} onClick={(reset, handleScroll)}>
           <StyledLink to="./intro">
             <li>회사소개</li>
           </StyledLink>

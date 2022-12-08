@@ -13,6 +13,9 @@ const PermitBox = styled.div`
   h1 {
     text-align: center;
   }
+  h2 {
+    margin: 10px;
+  }
   .sub {
     font-weight: 300;
   }
@@ -78,7 +81,7 @@ export default function Permit() {
       id: 1,
       img: SandingRoom,
       title: "허가증1",
-      text: "하는 일 이것 저것",
+      text: "하는 일 이것 저것 ",
     },
     {
       id: 2,

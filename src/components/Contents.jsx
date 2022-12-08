@@ -102,7 +102,7 @@ const Service = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 70px 0 50px 0;
     .con-title {
       margin-top: 20px;
     }

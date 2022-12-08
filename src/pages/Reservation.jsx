@@ -4,8 +4,6 @@ import PageTop from "../components/PageTop";
 import { MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { MailForm } from "../components/MailForm";
-import { AntdForm } from "../components/AntdForm";
-import RollingGear from "../components/RollingGear";
 import SmallGear from "../components/SmallGear";
 
 const ReserveContain = styled.div`
@@ -60,7 +58,12 @@ const ReserveContain = styled.div`
       font-size: 90px;
       color: var(--black);
       z-index: 5;
-      transition: 2s;
+      /* transition: 2s; */
+      /* position: absolute; */
+      animation-name: spinY;
+      animation-duration: 10000ms;
+      animation-iteration-count: infinite;
+      /* animation-timing-function: linear; */
     }
   }
   .icon:hover {
@@ -77,6 +80,24 @@ const ReserveContain = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+  }
+  @keyframes spinY {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .icon-round {
+      width: 100px;
+      height: 100px;
+      .icon {
+        font-size: 50px;
+      }
+    }
   }
 `;
 
@@ -95,8 +116,8 @@ export default function Reservation() {
         <Inner className="flex">
           <div className="item">
             <div className="icon-round">
-              <PhoneOutlined className="icon" />
-              <SmallGear className="gear left" />
+              <PhoneOutlined className="icon delay" />
+              <SmallGear className="gear delay" />
             </div>
             <h2>전화예약</h2>
             <p>
@@ -109,7 +130,7 @@ export default function Reservation() {
           <div className="item">
             <div className="icon-round">
               <MailOutlined className="icon" />
-              <SmallGear className="gear left" />
+              <SmallGear className="gear" />
             </div>
             <h2>e-mail</h2>
             <p>

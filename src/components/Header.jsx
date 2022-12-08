@@ -42,7 +42,8 @@ const Navbar = styled.header`
       padding: 10px 15px;
     }
     li:hover {
-      color: var(--ivory);
+      /* color: var(--ivory); */
+      color: var(--main-color);
       transition: 0.5s;
       text-decoration: underline;
     }
@@ -132,9 +133,11 @@ export default function Header() {
           <StyledLink to="./intro">
             <li>회사소개</li>
           </StyledLink>
-          <li>
-            <StyledLink to="./vehicle">차량시공</StyledLink>
-          </li>
+
+          <StyledLink to="./vehicle">
+            <li>차량시공</li>
+          </StyledLink>
+
           <StyledLink to="/reservation">
             <li>예약안내</li>
           </StyledLink>

@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay } from "swiper";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import img1 from "../images/p-1.png";
 // import img1 from "../images/kb손해보험.png";
 import img2 from "../images/삼성화재다이렉트.png";
@@ -12,7 +12,7 @@ import img5 from "../images/axa.png";
 // Import Swiper styles
 import "swiper/css";
 import Inner from "./Inner";
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default function Slider() {
   return (
@@ -21,14 +21,13 @@ export default function Slider() {
         spaceBetween={50}
         slidesPerView={5}
         loop={true}
-        // Autoplay={{ delay: 2000 }}
-        // breakpoints={{
-        //   768: {
-        //     slidesPerView: 3,
-        //   },
-        // }}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <img src={img1} alt="img1" />

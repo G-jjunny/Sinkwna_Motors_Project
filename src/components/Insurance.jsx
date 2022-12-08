@@ -17,7 +17,7 @@ export default function Insurance() {
   return (
     <Insur>
       <Inner>
-        <h2>보험수리</h2>
+        {/* <h2>보험상담</h2> */}
         <p>
           신광자동차공업사 에서는 전차종 뿐만 아니라 전보험 수리상담을
           진행해드리고 있습니다.

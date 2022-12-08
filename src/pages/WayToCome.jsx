@@ -65,6 +65,9 @@ const Location = styled.div`
     .flex {
       flex-direction: column;
     }
+    .img-sinkwang {
+      display: none;
+    }
 
     /* 지도가 이미지태그로 인식됨 img태그는 사용ㄴㄴ 클래스나 id값 사용할 것 */
 
@@ -91,7 +94,7 @@ export default function WayToCome() {
           <h1 className="sub">오시는길</h1>
         </div>
         <Inner className="flex">
-          <img src={Sinkwang} alt="img" />
+          <img src={Sinkwang} alt="img" className="img-sinkwang" />
           <div>
             <div className="list">
               <HomeOutlined className="icon" />

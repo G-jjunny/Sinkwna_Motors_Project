@@ -47,6 +47,17 @@ const TextGroup = styled.div`
       font-size: 15px;
     }
   }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 25px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
 `;
 
 export default function PageTop(props) {

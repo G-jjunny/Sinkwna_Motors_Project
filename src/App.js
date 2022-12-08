@@ -24,19 +24,11 @@ function App() {
           <Route path="/waytocome" element={<WayToCome />} />
         </Routes>
         <FloatButton.BackTop />
-        <FloatButton
+        {/* <FloatButton
           tooltip={<div>Admin</div>}
           icon={<UserSwitchOutlined />}
           style={{
             right: 90,
-          }}
-          e
-        />
-        {/* <FloatButton
-          description="ADMIN"
-          shape="square"
-          style={{
-            right: 94,
           }}
         /> */}
         <Footer />

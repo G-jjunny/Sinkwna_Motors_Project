@@ -31,6 +31,11 @@ const Gearsmall = styled.div`
       left: calc(50% - 25vw); */
     }
   }
+  @media screen and (max-width: 500px) {
+    .gear {
+      width: 100px;
+    }
+  }
 
   @keyframes spin {
     from {

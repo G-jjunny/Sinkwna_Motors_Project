@@ -6,6 +6,8 @@ import Repair2 from "../images/정비.jfif";
 import Repair3 from "../images/repair2.jpg";
 import Carry from "../images/삼성렉카.png";
 import Insurance from "./Insurance";
+import Slider from "./Slider";
+import { Divider, List, Typography } from "antd";
 
 const Service = styled.div`
   padding: 70px 0 0;
@@ -57,21 +59,35 @@ const Service = styled.div`
       /* color: var(--text-color); */
     }
     h2 {
-      font-size: 28px;
+      font-size: 25px;
+      color: #fff;
     }
     .service-img {
       height: 240px;
     }
+    .ant-list {
+      /* margin-left: 20px; */
+    }
+    .ant-list-header {
+      background-color: var(--dark);
+      border-radius: 5px 5px 0 0;
+    }
 
     ul {
       list-style: none;
-      padding-left: 0;
-      /* color: var(--text-color); */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       li {
-        font-size: 20px;
+        display: inline-block;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      li:hover {
+        color: #fff;
+        /* background-color: var(--bg-color); */
+        background-color: var(--main-color);
+        scale: 1.03;
+        transition: 0.3s;
+        border-radius: 5px;
       }
     }
   }
@@ -87,7 +103,7 @@ const Service = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0;
-    h2 {
+    .con-title {
       margin-top: 20px;
     }
     .flex {
@@ -96,8 +112,9 @@ const Service = styled.div`
       padding: 20px 0;
     }
     .service-img {
-      width: 70%;
+      width: 60%;
       height: 30vw;
+      margin-bottom: 20px;
     }
     .text {
       /* margin: 0; */
@@ -116,19 +133,27 @@ const Title = styled.h1`
     border-bottom: 2px solid #000;
   }
 `;
+const data = [
+  "제천시내 전지역",
+  "중앙고속도로",
+  "제천↔신림",
+  "제천↔단양",
+  "제천/평택간 고속도로",
+  "제천↔동충주",
+];
 
 function User({ user }) {
   return (
     <>
+      {/* <div>{user.slide}</div> */}
       <Inner className="con">
         <div className="flex">
           <img src={user.img} className="service-img" alt="img" />
           <div className="text">
-            <h2>{user.title}</h2>
+            <h2 className="con-title">{user.title}</h2>
             <p> - {user.text}</p>
           </div>
         </div>
-        {/* <div>{user.slide}</div> */}
       </Inner>
     </>
   );
@@ -153,7 +178,7 @@ function UserList() {
       img: Repair2,
       title: "보험/사고 수리",
       text: "신과자동차는 1급 종합정비업체로서, 자동차 사고의 정확한 수리견적(보험견적), 차체수리 및 수용성 보수도장 등 전문 장비와 인력이 항상 준비되어 있습니다.",
-      slide: <Insurance />,
+      slide: <Slider />,
     },
   ];
 
@@ -170,22 +195,22 @@ function UserList() {
         <Inner className="flex">
           <img src={Carry} alt="img" className="service-img" />
           <div className="text">
-            <h2>삼성렉카 서비스</h2>
-            <ul>
-              <li> 제천시내 전지역 </li>
-              <li> 중앙고속도로 </li>
-              <li> 제천↔신림 </li>
-              <li> 제천↔단양 </li>
-              <li> 제천/평택간 고속도로 </li>
-              <li> 제천↔동충주 </li>
-            </ul>
-            <h2>
-              TEL: <a href="tel:043-648-1144">043-648-1144</a>
-            </h2>
+            <List
+              size="small"
+              header={<h2>삼성렉카 서비스</h2>}
+              // footer={
+              //   <div>
+              //     TEL: <a href="tel:043-648-1144">043-648-1144</a>
+              //   </div>
+              // }
+              bordered
+              dataSource={data}
+              renderItem={(item) => <List.Item>{item}</List.Item>}
+            />
           </div>
         </Inner>
       </div>
-      {/* <Insurance /> */}
+      <Insurance />
     </Service>
   );
 }

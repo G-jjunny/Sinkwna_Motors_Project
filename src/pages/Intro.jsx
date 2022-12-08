@@ -42,6 +42,17 @@ const TextGroup = styled.div`
   @media screen and (max-width: 768px) {
     max-width: 90%;
   }
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 22px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
 `;
 export default function Intro() {
   return (

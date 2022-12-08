@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Button, Checkbox, ConfigProvider, Form, Input } from "antd";
+import { Button, message, Form, Input } from "antd";
 import styled from "styled-components";
-import { send } from "emailjs-com";
 
 const Mail = styled.div`
   display: flex;
@@ -47,10 +46,20 @@ const Mail = styled.div`
       margin-left: 80px;
     }
   }
+  @media screen and (max-width: 500px) {
+    padding: 0 20px 100px 20px;
+    .row {
+      input {
+        min-width: 100%;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const MailForm = () => {
   const form = useRef();
+  const [messageApi, contextHolder] = message.useMessage();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -64,18 +73,27 @@ export const MailForm = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          alert("메세지를 전송하였습니다.");
+          // console.log(result.text);
+          // alert("메세지를 전송하였습니다.");
+          messageApi.open({
+            type: "success",
+            content: "메세지를 전송하였습니다.",
+          });
         },
         (error) => {
-          console.log(error.text);
-          alert("메세지 전송에 실패하였습니다.");
+          // console.log(error.text);
+          // alert("메세지 전송에 실패하였습니다.");
+          messageApi.open({
+            type: "error",
+            content: "메세지 전송에 실패하였습니다.",
+          });
         }
       );
   };
 
   return (
     <Mail>
+      {contextHolder}
       <div className="title">
         <h1 className="sub">문의하기</h1>
       </div>

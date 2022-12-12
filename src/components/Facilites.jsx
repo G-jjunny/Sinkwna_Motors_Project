@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 // import SandingRoom from "../images/SandingRoom.jpg";
-import Imported from "../images/수입차정비.jpg";
-import Regular from "../images/일반차정비.jpg";
+import Imported from "../images/수입차정비1.jpg";
+import Regular from "../images/일반정비.jpg";
+import Sanding from "../images/일반차정비.jpg";
 import Inner from "./Inner";
 
 const Factory = styled.div`
@@ -104,15 +105,15 @@ export default function Facilites() {
             </div>
           </div>
           <div className="contents">
-            <img src={Imported} alt="Imported" />
+            <img src={Regular} alt="Imported" />
             <div className="cover">
-              <h1>수입차정비</h1>
+              <h1>일반정비</h1>
             </div>
           </div>
           <div className="contents">
-            <img src={Regular} alt="Regular" />
+            <img src={Sanding} alt="Regular" />
             <div className="cover">
-              <h1>일반차정비</h1>
+              <h1>판금 & 도색</h1>
             </div>
           </div>
         </div>

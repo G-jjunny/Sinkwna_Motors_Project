@@ -41,13 +41,16 @@ const TextGroup = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 90%;
+    h2 {
+      font-size: 20px;
+    }
   }
   @media screen and (max-width: 500px) {
     h1 {
       font-size: 22px;
     }
     h2 {
-      font-size: 18px;
+      font-size: 14px;
     }
     p {
       font-size: 15px;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Inner from "./Inner";
 import SandingRoom from "../images/SandingRoom.jpg";
+import Business from "../images/사업장.jpg";
 
 const PermitBox = styled.div`
   padding: 70px 0;
@@ -15,6 +16,7 @@ const PermitBox = styled.div`
   }
   h2 {
     margin: 10px;
+    font-size: 22px;
   }
   .sub {
     font-weight: 300;
@@ -52,6 +54,9 @@ const PermitBox = styled.div`
     }
   }
   @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 18px;
+    }
     .contents {
       margin: 0;
       min-width: 120px;
@@ -79,8 +84,8 @@ export default function Permit() {
   const MachineList = [
     {
       id: 1,
-      img: SandingRoom,
-      title: "허가증1",
+      img: Business,
+      title: "종합검사 지정 정비사업장",
       text: "하는 일 이것 저것 ",
     },
     {

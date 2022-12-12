@@ -13,7 +13,7 @@ const Navbar = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 9;
   /* 스크롤시 폰트 색 변경 */
   color: ${(props) => (props.isScroll ? "var(--dark)" : "var(--main2-color)")};
   /* color: var(--main2-color); */
@@ -80,7 +80,9 @@ const Navbar = styled.header`
         margin-left: 10px;
       }
       li:hover {
-        background-color: var(--main2-color);
+        /* background-color: var(--main2-color); */
+        background-color: var(--main-color);
+        color: #000;
       }
       .toggled-btn {
         display: block;
@@ -112,15 +114,9 @@ export default function Header() {
   };
 
   // 메뉴 링크 클릭시 toggle 리셋
+  // 화면 상단 이동
   const reset = () => {
     setIsToggleOpen(false);
-  };
-
-  //반응형 헤더 state
-  const headerani = isToggleOpen ? "nav-menu" : "nav-menu active";
-
-  // 헤더클릭시 화면 상단으로 이동
-  const handleScroll = (e) => {
     if (!window.scrollY) return;
     // 현재 위치가 이미 최상단일 경우 return
 
@@ -129,6 +125,20 @@ export default function Header() {
       behavior: "smooth",
     });
   };
+
+  //반응형 헤더 state
+  const headerani = isToggleOpen ? "nav-menu" : "nav-menu active";
+
+  // 헤더클릭시 화면 상단으로 이동
+  // const handleScroll = (e) => {
+  //   if (!window.scrollY) return;
+  //   // 현재 위치가 이미 최상단일 경우 return
+
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
   return (
     <Navbar
       isToggleOpen={isToggleOpen}
@@ -138,11 +148,11 @@ export default function Header() {
       {/* <Inner className="c1"> */}
       <div className="nav">
         <div className="logo">
-          <StyledLink to="/" onClick={(reset, handleScroll)}>
+          <StyledLink to="/" onClick={reset}>
             신광자동차
           </StyledLink>
         </div>
-        <ul className={headerani} onClick={(reset, handleScroll)}>
+        <ul className={headerani} onClick={reset}>
           <StyledLink to="./intro">
             <li>회사소개</li>
           </StyledLink>

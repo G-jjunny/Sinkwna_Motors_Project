@@ -15,9 +15,14 @@ const Main = styled.div`
     display: flex;
     flex-direction: column;
   }
-  h1 {
-    font-size: 40px;
+  .top-name {
+    font-size: 45px;
     font-weight: 700;
+  }
+  @media screen and (max-width: 500px) {
+    .top-name {
+      font-size: 35px;
+    }
   }
 `;
 
@@ -69,7 +74,7 @@ export default function Home() {
       <div className="bg-sinkwang">
         <Main>
           <h2 className="main">제천 최고 1급 자동차 공업사</h2>
-          <h1 className="main"> 신광자동차 공업사</h1>
+          <h1 className=" main top-name"> 신광자동차 공업사</h1>
         </Main>
         {/* <Inner className="flex">
           <div className="main-section">

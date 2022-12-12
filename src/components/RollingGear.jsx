@@ -33,14 +33,22 @@ const RollingCircle = styled.div`
       top: calc(50% - 25vw);
       left: calc(50% - 25vw);
     }
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
+    @media screen and (max-width: 500px) {
+      .circle {
+        width: 70vw;
+        height: 70vw;
+        top: calc(50% - 35vw);
+        left: calc(50% - 35vw);
+      }
     }
-    to {
-      transform: rotate(360deg);
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
 `;

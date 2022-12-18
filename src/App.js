@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 // import "antd/dist/reset.css";
 import Footer from "./components/Footer";
@@ -10,11 +10,23 @@ import Vehicle from "./pages/Vehicle";
 import WayToCome from "./pages/WayToCome";
 import { FloatButton } from "antd";
 import { UserSwitchOutlined } from "@ant-design/icons";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [position, setPosition] = useState(0);
+  function onScroll() {
+    setPosition(window.scrollY);
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    console.log(position);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,15 +36,8 @@ function App() {
           <Route path="/waytocome" element={<WayToCome />} />
         </Routes>
         <FloatButton.BackTop />
-        {/* <FloatButton
-          tooltip={<div>Admin</div>}
-          icon={<UserSwitchOutlined />}
-          style={{
-            right: 90,
-          }}
-        /> */}
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

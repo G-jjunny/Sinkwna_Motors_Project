@@ -75,8 +75,10 @@ export default function Intro() {
               신광자동차공업사 방문을 환영합니다. <br />
               저희 신광자동차공업사는 제천지역 삼성렉카 및 자동차검사, 공업사
               업무 뿐 아니라 삼성/동부/KB 화재 등 각종 보험사 상담까지 진행하고
-              있습니다. 오랜 경력과 노하우를 바탕으로 찾아주시는 모든 고객
-              여러분께 최고의 만족과 서비스로 보답하겠습니다.
+              있습니다.
+              <br />
+              오랜 경력과 노하우를 바탕으로 찾아주시는 모든 고객 여러분께 최고의
+              만족과 서비스로 보답하겠습니다.
             </p>
             {/* <RollingGear className="text-bg" /> */}
           </Inner>
@@ -84,7 +86,7 @@ export default function Intro() {
       </div>
       <div className="ceo_bg">
         <TextGroup>
-          <div className="title">
+          {/* <div className="title">
             <h1>
               SINCE <span className="sub">2000</span>
             </h1>
@@ -93,7 +95,7 @@ export default function Intro() {
           <h2>
             n년동안 쌓아온 경력과 노하우를 바탕으로 고객 여러분께 최고의
             서비스와 만족으로 보답하겠습니다.
-          </h2>
+          </h2> */}
           <ul>
             {/* <li>2000</li>
             <li>2000</li>

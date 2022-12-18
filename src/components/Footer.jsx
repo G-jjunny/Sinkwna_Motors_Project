@@ -70,8 +70,9 @@ export default function Footer() {
             </StyledLink>
           </div>
           <p className="fp">
-            상호명 : 신광자동차공업사 | 대표 : 정동수 | 사업자 등록번호 :
-            ㅈㅁㄷㄱㅁㅈㄷㄱ
+            상호명 : 신광자동차공업사 | 대표 : 정동수
+            {/* | 사업자 등록번호 :
+            ㅈㅁㄷㄱㅁㅈㄷㄱ */}
           </p>
           <p className="fp">
             주소 : 충북 제천시 둔전로 49 고암동 608-5(비행장 뒤편)

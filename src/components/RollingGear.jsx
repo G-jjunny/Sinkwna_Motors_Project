@@ -6,8 +6,6 @@ const RollingCircle = styled.div`
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--main2-color); */
     animation-name: spin;
     animation-duration: 30000ms;
     animation-iteration-count: infinite;
@@ -16,10 +14,6 @@ const RollingCircle = styled.div`
     top: calc(50% - 15vw);
     left: calc(50% - 15vw);
     z-index: -1;
-    /*   transform: rotate(3deg); */
-    /* transform: rotate(0.3rad);/ */
-    /* transform: rotate(3grad); */
-    /* transform: rotate(.03turn);  */
   }
   .gear {
     z-index: -1;

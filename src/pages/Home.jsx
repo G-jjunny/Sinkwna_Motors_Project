@@ -7,24 +7,7 @@ import Permit from "../components/Permit";
 import RollingGear from "../components/RollingGear";
 import Contents from "../components/Contents";
 import Facilites from "../components/Facilites";
-
-const Main = styled.div`
-  .main {
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  .top-name {
-    font-size: 45px;
-    font-weight: 700;
-  }
-  @media screen and (max-width: 500px) {
-    .top-name {
-      font-size: 35px;
-    }
-  }
-`;
+import MainCarousel from "../components/MainCarousel";
 
 const TextGroup = styled.div`
   text-align: center;
@@ -71,20 +54,13 @@ const TextGroup = styled.div`
 export default function Home() {
   return (
     <>
-      <div className="bg-sinkwang">
+      {/* <div className="bg-sinkwang">
         <Main>
           <h2 className="main">제천 최고 1급 자동차 공업사</h2>
           <h1 className=" main top-name"> 신광자동차 공업사</h1>
         </Main>
-        {/* <Inner className="flex">
-          <div className="main-section">
-            <TextGroup>
-              <h2 className="main">제천 최고 1급 자동차 공업사</h2>
-              <h1 className="main"> 신광자동차 공업사</h1>
-            </TextGroup>
-          </div>
-        </Inner> */}
-      </div>
+      </div> */}
+      <MainCarousel />
       <div className="space"></div>
       <TextGroup>
         <Inner className="c1">
@@ -94,8 +70,10 @@ export default function Home() {
             신광자동차공업사 방문을 환영합니다. <br />
             저희 신광자동차공업사는 제천지역 삼성렉카 및 자동차검사, 공업사 업무
             뿐 아니라 삼성/동부/KB 화재 등 각종 보험사 상담까지 진행하고
-            있습니다. 오랜 경력과 노하우를 바탕으로 찾아주시는 모든 고객
-            여러분께 최고의 만족과 서비스로 보답하겠습니다.
+            있습니다.
+            <br />
+            오랜 경력과 노하우를 바탕으로 찾아주시는 모든 고객 여러분께 최고의
+            만족과 서비스로 보답하겠습니다.
           </p>
           <RollingGear className="text-bg" />
         </Inner>

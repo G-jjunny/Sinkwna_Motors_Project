@@ -5,6 +5,10 @@ import SandingRoom from "../images/SandingRoom.jpg";
 import Business from "../images/사업장.jpg";
 import TestRoom from "../images/검사장_1.webp";
 import GCompany from "../images/프로미카지정우수업체.jpg";
+import Insur from "../images/보험수리전용.jpg";
+import Gen from "../images/일반정비_closeup.jpg";
+import Spray from "../images/열처리장.jpg";
+import StWr from "../images/판금_도장.jpg";
 
 const PermitBox = styled.div`
   padding: 70px 0;
@@ -59,6 +63,11 @@ const PermitBox = styled.div`
     /* justify-content: space-between; */
     flex-flow: wrap;
   }
+  @media screen and (max-width: 1150px) {
+    .flex {
+      justify-content: space-around;
+    }
+  }
   @media screen and (max-width: 768px) {
     .contents {
       width: 50%;
@@ -82,8 +91,9 @@ const PermitBox = styled.div`
     }
     img {
       width: 100%;
+      height: 150px;
       /* width: 120px; */
-      min-width: 120px;
+      min-width: 180px;
     }
   }
 `;
@@ -122,20 +132,32 @@ export default function Permit() {
     },
     {
       id: 4,
-      img: "https://placeimg.com/200/200/car",
-      title: "장비 이름",
+      img: Insur,
+      title: "보험수리 전용",
       text: "하는 일 이것 저것",
     },
     {
       id: 5,
-      img: "https://placeimg.com/200/200/car",
-      title: "장비 이름",
+      img: Gen,
+      title: "일반수리 전용",
       text: "하는 일 이것 저것",
     },
     {
       id: 6,
-      img: "https://placeimg.com/200/200/car",
-      title: "장비 이름",
+      img: Spray,
+      title: "열처리장",
+      text: "하는 일 이것 저것",
+    },
+    {
+      id: 7,
+      img: SandingRoom,
+      title: "샌딩룸",
+      text: "하는 일 이것 저것",
+    },
+    {
+      id: 8,
+      img: StWr,
+      title: "판금 및 도장부",
       text: "하는 일 이것 저것",
     },
   ];

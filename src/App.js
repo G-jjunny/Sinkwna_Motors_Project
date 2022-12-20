@@ -9,21 +9,8 @@ import Reservation from "./pages/Reservation";
 import Vehicle from "./pages/Vehicle";
 import WayToCome from "./pages/WayToCome";
 import { FloatButton } from "antd";
-import { UserSwitchOutlined } from "@ant-design/icons";
-import { useEffect, useState } from "react";
 
 function App() {
-  const [position, setPosition] = useState(0);
-  function onScroll() {
-    setPosition(window.scrollY);
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    console.log(position);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
   return (
     <>
       <HashRouter>

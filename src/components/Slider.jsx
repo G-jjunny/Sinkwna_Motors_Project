@@ -21,13 +21,8 @@ export default function Slider() {
         spaceBetween={50}
         slidesPerView={5}
         loop={true}
-        // breakpoints={{
-        //   768: {
-        //     slidesPerView: 3,
-        //   },
-        // }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <img src={img1} alt="img1" />
@@ -42,12 +37,7 @@ export default function Slider() {
           <img src={img4} alt="img4" />
         </SwiperSlide>
         <SwiperSlide>
-          <img
-            className="axa"
-            src={img5}
-            alt="img5"
-            // style={{ width: "100px"}}
-          />
+          <img className="axa" src={img5} alt="img5" />
         </SwiperSlide>
       </Swiper>
     </Inner>

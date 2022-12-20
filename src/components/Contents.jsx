@@ -8,6 +8,7 @@ import Carry from "../images/삼성렉카.png";
 import Insurance from "./Insurance";
 import Slider from "./Slider";
 import { Divider, List, Typography } from "antd";
+import useScrollFadeIn from "../hooks/useScrollFadeInOthers";
 
 const Service = styled.div`
   padding: 70px 0 0;
@@ -143,15 +144,30 @@ const data = [
 ];
 
 function User({ user }) {
+  const animatedItem = {
+    0: useScrollFadeIn("right", 1, 0),
+    1: useScrollFadeIn("left", 1, 0),
+    2: useScrollFadeIn("up", 1, 0),
+    3: useScrollFadeIn("down", 1, 0),
+    4: useScrollFadeIn("left", 1, 0.2),
+    5: useScrollFadeIn("down", 1, 0.2),
+  };
   return (
     <>
       {/* <div>{user.slide}</div> */}
       <Inner className="con">
         <div className="flex">
-          <img src={user.img} className="service-img" alt="img" />
+          <img
+            src={user.img}
+            className="service-img"
+            alt="img"
+            {...animatedItem[0]}
+          />
           <div className="text">
-            <h2 className="con-title">{user.title}</h2>
-            <p> - {user.text}</p>
+            <h2 className="con-title" {...animatedItem[1]}>
+              {user.title}
+            </h2>
+            <p {...animatedItem[4]}> - {user.text}</p>
           </div>
         </div>
       </Inner>
@@ -181,7 +197,10 @@ function UserList() {
       slide: <Slider />,
     },
   ];
-
+  const animatedItem = {
+    0: useScrollFadeIn("right", 1, 0),
+    1: useScrollFadeIn("left", 1, 0),
+  };
   return (
     <Service>
       <Title>
@@ -193,8 +212,13 @@ function UserList() {
       ))}
       <div className="carry">
         <Inner className="flex">
-          <img src={Carry} alt="img" className="service-img" />
-          <div className="text">
+          <img
+            src={Carry}
+            alt="img"
+            className="service-img"
+            {...animatedItem[0]}
+          />
+          <div className="text" {...animatedItem[1]}>
             <List
               size="small"
               header={<h2>삼성렉카 서비스</h2>}

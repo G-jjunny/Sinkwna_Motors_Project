@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Button, message, Form, Input } from "antd";
 import styled from "styled-components";
+import useScrollFadeIn from "../hooks/useScrollFadeInOthers";
 
 const Mail = styled.div`
   display: flex;
@@ -63,6 +64,11 @@ const Mail = styled.div`
 export const MailForm = () => {
   const form = useRef();
   const [messageApi, contextHolder] = message.useMessage();
+  const animatedItem = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("up", 1, 0.2),
+    2: useScrollFadeIn("up", 1, 0.3),
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -95,7 +101,7 @@ export const MailForm = () => {
   };
 
   return (
-    <Mail>
+    <Mail {...animatedItem[1]}>
       {contextHolder}
       <div className="title">
         <h1 className="sub">문의하기</h1>

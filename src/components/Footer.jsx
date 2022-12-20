@@ -79,7 +79,8 @@ export default function Footer() {
           </p>
           <p className="fp">TEL : 043-644-8634 | PHONE : 010-8841-1144</p>
 
-          <Slider />
+          {/* <Slider /> */}
+          <FooterSlider />
         </Inner>
         <p className="fp">Copyright ⓒ 2022 신광자동차. All Right Reserved</p>
       </StyledFooter>

@@ -154,8 +154,7 @@ a:hover {
 }
 
 .swiper-wrapper img {
-  /* margin-left: 10px; */
-  width: 200px;
+  width: 100%;
 }
 .swiper-wrapper .axa {
   width: 100px;

@@ -6,7 +6,6 @@ const MapContainer = () => {
   useEffect(() => {
     const container = document.getElementById("myMap");
     const options = {
-      //   center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도 중심좌표
       center: new kakao.maps.LatLng(37.1624125, 128.2295543), // 지도 중심좌표
       level: 3,
       zoomable: false,
@@ -36,10 +35,6 @@ const MapContainer = () => {
       position: iwPosition,
       content: iwContent,
     });
-    // function setZoomable(zoomable) {
-    //   // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
-    //   map.setZoomable(zoomable);
-    // }
     map.setZoomable(false);
     map.relayout();
 

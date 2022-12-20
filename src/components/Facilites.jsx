@@ -5,6 +5,7 @@ import Imported from "../images/수입차정비1.jpg";
 import Regular from "../images/일반정비.jpg";
 import Sanding from "../images/일반차정비.jpg";
 import Inner from "./Inner";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const Factory = styled.div`
   text-align: center;
@@ -83,6 +84,7 @@ const Factory = styled.div`
 `;
 
 export default function Facilites() {
+  const animatedItem = useScrollFadeIn();
   return (
     <Factory>
       <Inner>
@@ -91,7 +93,7 @@ export default function Facilites() {
           <h1 className="sub">설비시설</h1>
         </div>
         <p>신광자동차의 주요 설비시설 입니다.</p>
-        <div className="row row-3">
+        <div className="row row-3" {...animatedItem}>
           {/* <div className="contents">
             <img src={SandingRoom} alt="sandingroom" />
             <div className="cover">

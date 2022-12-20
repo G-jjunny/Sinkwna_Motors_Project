@@ -46,9 +46,9 @@ export default function MainCarousel() {
         <div>
           <div className="bg-sinkwang bg-3"></div>
         </div>
-        <div>
+        {/* <div>
           <div className="bg-sinkwang bg-4"></div>
-        </div>
+        </div> */}
       </Carousel>
       <div className="cover">
         <Main>

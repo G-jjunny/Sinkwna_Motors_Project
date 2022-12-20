@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 // import CarryService from "../components/CarryService";
 import Inner from "../components/Inner";
@@ -54,12 +54,6 @@ const TextGroup = styled.div`
 export default function Home() {
   return (
     <>
-      {/* <div className="bg-sinkwang">
-        <Main>
-          <h2 className="main">제천 최고 1급 자동차 공업사</h2>
-          <h1 className=" main top-name"> 신광자동차 공업사</h1>
-        </Main>
-      </div> */}
       <MainCarousel />
       <div className="space"></div>
       <TextGroup>

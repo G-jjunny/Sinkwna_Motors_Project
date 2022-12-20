@@ -9,6 +9,7 @@ import Insur from "../images/보험수리전용.jpg";
 import Gen from "../images/일반정비_closeup.jpg";
 import Spray from "../images/열처리장.jpg";
 import StWr from "../images/판금_도장.jpg";
+import useScrollFadeIn from "../hooks/useScrollFadeInOthers";
 
 const PermitBox = styled.div`
   padding: 70px 0;
@@ -99,8 +100,15 @@ const PermitBox = styled.div`
 `;
 
 function Machine({ list }) {
+  const animatedItem = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("up", 1, 0.2),
+    2: useScrollFadeIn("up", 1, 0.3),
+    3: useScrollFadeIn("right", 1, 0.2),
+    4: useScrollFadeIn("down", 1, 0),
+  };
   return (
-    <div className="contents">
+    <div className="contents" {...animatedItem[0]}>
       <img src={list.img} alt="mac1" />
       <div className="text-group">
         <h2>{list.title}</h2>
@@ -161,6 +169,13 @@ export default function Permit() {
       text: "하는 일 이것 저것",
     },
   ];
+  const animatedItem = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("up", 1, 0.2),
+    2: useScrollFadeIn("up", 1, 0.3),
+    3: useScrollFadeIn("right", 1, 0.2),
+    4: useScrollFadeIn("down", 1, 0),
+  };
   return (
     <>
       <PermitBox>

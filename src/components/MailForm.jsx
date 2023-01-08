@@ -82,16 +82,12 @@ export const MailForm = () => {
       )
       .then(
         (result) => {
-          // console.log(result.text);
-          // alert("메세지를 전송하였습니다.");
           messageApi.open({
             type: "success",
             content: "메세지를 전송하였습니다.",
           });
         },
         (error) => {
-          // console.log(error.text);
-          // alert("메세지 전송에 실패하였습니다.");
           messageApi.open({
             type: "error",
             content: "메세지 전송에 실패하였습니다.",
@@ -101,17 +97,14 @@ export const MailForm = () => {
   };
 
   return (
-    <Mail {...animatedItem[1]}>
+    <Mail>
       {contextHolder}
       <div className="title">
         <h1 className="sub">문의하기</h1>
       </div>
-      {/* <Form > */}
-      {/* <ConfigProvider form={{ validateMessages }}> */}
       <form ref={form} onSubmit={sendEmail}>
         <div className="row">
           <Form.Item
-            // name={["user", "name"]}
             name={["user", "name"]}
             label="이름"
             rules={[
@@ -160,15 +153,10 @@ export const MailForm = () => {
         <Form.Item name={["user", "text"]} label="내용">
           <Input.TextArea name="text" rows={7} placeholder="문의하실 내용" />
         </Form.Item>
-        {/* <Button type="primary" htmlType="submit" value="send">
-          전송
-        </Button> */}
         <button className="btn btn--submit" type="submit" value="send">
           전송
         </button>
       </form>
-      {/* </ConfigProvider> */}
-      {/* </Form> */}
     </Mail>
   );
 };

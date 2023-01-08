@@ -15,20 +15,44 @@ const RollingCircle = styled.div`
     left: calc(50% - 15vw);
     z-index: -1;
   }
-  .gear {
+  /* .gear {
     z-index: -1;
     color: aliceblue;
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+  } */
+  .gear {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 30000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: calc(50% - 15vw);
+    left: calc(50% - 15vw);
+    z-index: -1;
   }
 
   @media screen and (max-width: 768px) {
-    .circle {
+    /* .circle {
+      width: 50vw;
+      height: 50vw;
+      top: calc(50% - 25vw);
+      left: calc(50% - 25vw);
+    } */
+    .gear {
       width: 50vw;
       height: 50vw;
       top: calc(50% - 25vw);
       left: calc(50% - 25vw);
     }
     @media screen and (max-width: 500px) {
-      .circle {
+      .gear {
         width: 70vw;
         height: 70vw;
         top: calc(50% - 35vw);
@@ -50,9 +74,9 @@ const RollingCircle = styled.div`
 export default function RollingGear() {
   return (
     <RollingCircle>
-      <div className="circle">
-        <img src={Gear} className="gear" alt="gear" />
-      </div>
+      {/* <div className="circle"> */}
+      <img src={Gear} className="gear" alt="gear" />
+      {/* </div> */}
     </RollingCircle>
   );
 }

@@ -76,7 +76,6 @@ export default function Home() {
       <Facilites />
       <Contents />
       <Permit />
-      {/* <Insuranc /> */}
     </>
   );
 }

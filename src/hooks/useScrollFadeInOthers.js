@@ -17,7 +17,6 @@ const useScrollFadeInOthers = (direction = "up", duration = 1, delay = 0) => {
         return;
     }
   };
-
   const onScroll = useCallback(
     ([entry]) => {
       const { current } = element;
@@ -32,22 +31,17 @@ const useScrollFadeInOthers = (direction = "up", duration = 1, delay = 0) => {
     },
     [delay, duration]
   );
-
   useEffect(() => {
     let observer;
-
     if (element.current) {
       observer = new IntersectionObserver(onScroll, { threshold: 0.7 });
       observer.observe(element.current);
     }
-
     return () => observer && observer.disconnect();
   }, [onScroll]);
-
   return {
     ref: element,
     style: { opacity: 0, transform: handleDirection(direction) },
   };
 };
-
 export default useScrollFadeInOthers;

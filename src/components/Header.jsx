@@ -65,7 +65,7 @@ const Navbar = styled.header`
         width: 100%;
         transition: 0.5s;
         background-color: var(--dark);
-        margin-top: 55px;
+        margin-top: 50px;
         color: var(--text-color);
         /* display: ${(props) => (props.isToggleOpen ? "block" : "none")}; */
       }
@@ -110,7 +110,7 @@ export default function Header() {
 
   const handleToggleOpen = () => {
     setIsToggleOpen(!isToggleOpen);
-    console.log(isToggleOpen);
+    // console.log(isToggleOpen);
   };
 
   // 메뉴 링크 클릭시 toggle 리셋
@@ -129,16 +129,6 @@ export default function Header() {
   //반응형 헤더 state
   const headerani = isToggleOpen ? "nav-menu" : "nav-menu active";
 
-  // 헤더클릭시 화면 상단으로 이동
-  // const handleScroll = (e) => {
-  //   if (!window.scrollY) return;
-  //   // 현재 위치가 이미 최상단일 경우 return
-
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
   return (
     <Navbar
       isToggleOpen={isToggleOpen}

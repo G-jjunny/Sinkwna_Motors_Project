@@ -5,7 +5,8 @@ import Imported from "../images/수입차정비1.jpg";
 import Regular from "../images/일반정비.jpg";
 import Sanding from "../images/일반차정비.jpg";
 import Inner from "./Inner";
-import useScrollFadeIn from "../hooks/useScrollFadeIn";
+// import useScrollFadeIn from "../hooks/useScrollFadeIn";
+import useScrollFadeIn from "../hooks/useScrollFadeInOthers";
 
 const Factory = styled.div`
   text-align: center;
@@ -84,7 +85,13 @@ const Factory = styled.div`
 `;
 
 export default function Facilites() {
-  const animatedItem = useScrollFadeIn();
+  const animatedItem = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("up", 1, 0.2),
+    2: useScrollFadeIn("up", 1, 0.3),
+    3: useScrollFadeIn("right", 1, 0.2),
+    4: useScrollFadeIn("down", 1, 0),
+  };
   return (
     <Factory>
       <Inner>
@@ -93,33 +100,33 @@ export default function Facilites() {
           <h1 className="sub">설비시설</h1>
         </div>
         <p>신광자동차의 주요 설비시설 입니다.</p>
-        <div className="row row-3" {...animatedItem}>
+        <div className="row row-3">
           {/* <div className="contents">
             <img src={SandingRoom} alt="sandingroom" />
             <div className="cover">
               <h1>샌딩룸</h1>
             </div>
           </div> */}
-          <div className="contents">
+          <div className="contents" {...animatedItem[0]}>
             <img src={Imported} alt="Imported" />
             <div className="cover">
               <h1>수입차정비</h1>
             </div>
           </div>
-          <div className="contents">
+          <div className="contents" {...animatedItem[1]}>
             <img src={Regular} alt="Imported" />
             <div className="cover">
               <h1>일반정비</h1>
             </div>
           </div>
-          <div className="contents">
+          <div className="contents" {...animatedItem[2]}>
             <img src={Sanding} alt="Regular" />
             <div className="cover">
               <h1>판금 & 도색</h1>
             </div>
           </div>
         </div>
-        <div className="drop">test</div>
+        {/* <div className="drop">test</div> */}
       </Inner>
     </Factory>
   );

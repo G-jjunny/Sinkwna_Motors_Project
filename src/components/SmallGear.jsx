@@ -6,8 +6,6 @@ const Gearsmall = styled.div`
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
-    /* background-color: var(--main2-color); */
     animation-name: spin;
     animation-duration: 30000ms;
     animation-iteration-count: infinite;

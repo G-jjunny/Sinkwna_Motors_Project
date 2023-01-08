@@ -6,21 +6,6 @@ import { send } from "emailjs-com";
 
 const Mail = styled.div`
   padding: 0 10%;
-  /* label {
-    margin: 4px 0;
-  } */
-  /* .flex {
-    display: flex;
-    justify-content: space-between;
-    input {
-      width: 250px;
-    }
-  } */
-  /* form {
-    padding: 0 50px;
-    display: flex;
-    flex-direction: column;
-  } */
   @media screen and (max-width: 768px) {
     padding: 0;
     form {
@@ -37,16 +22,6 @@ const layout = {
     span: 20,
   },
 };
-// const validateMessages = {
-//   required: "${label} is required!",
-//   types: {
-//     email: "${label} is not a valid email!",
-//     number: "${label} is not a valid number!",
-//   },
-//   number: {
-//     range: "${label} must be between ${min} and ${max}",
-//   },
-// };
 
 export const AntdForm = () => {
   const form = useRef();
@@ -82,20 +57,10 @@ export const AntdForm = () => {
         <div className="title">
           <h1 className="sub">문의하기</h1>
         </div>
-        {/* <Form
-          {...layout}
-          // name="nest-messages"
-          // onFinish={onFinish}
-          // validateMessages={validateMessages}
-          // ref={form}
-          // onSubmit={sendEmail}
-          // name="nest-messages"
-        > */}
         <form
           {...layout}
           name="nest-messages"
           onFinish={onFinish}
-          // validateMessages={validateMessages}
           ref={form}
           onSubmit={sendEmail}
         >
@@ -169,12 +134,8 @@ export const AntdForm = () => {
             >
               전송
             </Button>
-            {/* <input type="submit" value="Send" /> */}
           </Form.Item>
         </form>
-        {/* </Form> */}
-
-        {/* atnd */}
       </Mail>
     </>
   );

@@ -13,8 +13,8 @@ import { FloatButton } from "antd";
 function App() {
   return (
     <>
-      {/* <BrowserRouter> */}
-      <HashRouter>
+      <BrowserRouter>
+        {/* <HashRouter> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,8 +25,8 @@ function App() {
         </Routes>
         <FloatButton.BackTop />
         <Footer />
-      </HashRouter>
-      {/* </BrowserRouter> */}
+        {/* </HashRouter> */}
+      </BrowserRouter>
     </>
   );
 }
